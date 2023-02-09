@@ -1,7 +1,7 @@
 {
   "name": "@slk333/lib-ogame",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "ogame related data and functionalities",
   "main": "./src/index.js",
   "scripts": {
