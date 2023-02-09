@@ -5,6 +5,8 @@ https://board.en.ogame.gameforge.com/index.php?thread/548906-formula-thread-v3/
 https://archive.ph/p5Ktw
 */
 
+import { Structure } from "./Structure"
+
 /* 1.0 Cost */
 function getMetalMineCost(targetLevel) {
 	/* 60 M, 15 C */
@@ -72,19 +74,7 @@ function getFacilityCost(targetLevel, baseCost) {
 	return { metalAmount, crystalAmount, deuteriumAmount }
 }
 
-/* 1.1  Production */
-export function getMetalMineProduction_s(currentLevel) {
-	const metalProduction_s = Math.trunc(30 * currentLevel * 1.1 ** currentLevel) / 3600
-	return metalProduction_s
-}
-export function getCrystalMineProduction_s(currentLevel) {
-	const crystalProduction_s = Math.trunc(20 * currentLevel * 1.1 ** currentLevel) / 3600
-	return crystalProduction_s
-}
-export function getDeuteriumProduction_s(currentLevel) {
-	const deuteriumProduction_s = Math.trunc(10 * currentLevel * 1.1 ** currentLevel * 1.44) / 3600
-	return deuteriumProduction_s
-}
+
 
 /* 1.2  Construction Time */
 export function getStructureConstructionTime(name, targetLevel, roboticsFactoryLevel, naniteFactoryLevel) {
@@ -122,25 +112,25 @@ export function getStructureCompoundedCost(name, achievedLevel) {
  */
 
 	switch (name) {
-		case "metalMine":
+		case Structure.MetalMine:
 			return computeStructureCompoundedCost(achievedLevel, getMetalMineCost, 0.5)
 
-		case "crystalMine":
+		case Structure.CrystalMine:
 			return computeStructureCompoundedCost(achievedLevel, getCrystalMineCost, 0.6)
 
-		case "deuteriumSynthesizer":
+		case Structure.DeuteriumSynthesizer:
 			return computeStructureCompoundedCost(achievedLevel, getDeuteriumMineCost, 0.5)
 
-		case "roboticsFactory":
+		case Structure.RoboticsFactory:
 			return computeStructureCompoundedCost(achievedLevel, getRoboticsFactoryCost, 1)
 
-		case "shipyard":
+		case Structure.Shipyard:
 			return computeStructureCompoundedCost(achievedLevel, getShipyardCost, 1)
 
-		case "researchLab":
+		case Structure.ResearchLab:
 			return computeStructureCompoundedCost(achievedLevel, getResearchLabCost, 1)
 
-		case "naniteFactory":
+		case Structure.NaniteFactory:
 			return computeStructureCompoundedCost(achievedLevel, getNaniteFactoryCost, 1)
 
 		default:
@@ -154,25 +144,25 @@ export function getStructureCompoundedCost(name, achievedLevel) {
 
 export function getStructureUpgradeCost(name, targetLevel) {
 	switch (name) {
-		case "metalMine":
+		case Structure.MetalMine:
 			return getMetalMineCost(targetLevel)
 
-		case "crystalMine":
+		case Structure.CrystalMine:
 			return getCrystalMineCost(targetLevel)
 
-		case "deuteriumSynthesizer":
+		case Structure.DeuteriumSynthesizer:
 			return getDeuteriumMineCost(targetLevel)
 
-		case "roboticsFactory":
+		case Structure.RoboticsFactory:
 			return getRoboticsFactoryCost(targetLevel)
 
-		case "shipyard":
+		case Structure.Shipyard:
 			return getShipyardCost(targetLevel)
 
-		case "researchLab":
+		case Structure.ResearchLab:
 			return getResearchLabCost(targetLevel)
 
-		case "naniteFactory":
+		case Structure.NaniteFactory:
 			return getNaniteFactoryCost(targetLevel)
 
 		default:
