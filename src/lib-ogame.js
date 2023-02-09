@@ -5,7 +5,7 @@ https://board.en.ogame.gameforge.com/index.php?thread/548906-formula-thread-v3/
 https://archive.ph/p5Ktw
 */
 
-import { Structure } from "./Structure"
+import { Structure } from "./Structure.js"
 
 /* 1.0 Cost */
 function getMetalMineCost(targetLevel) {
