@@ -1,15 +1,17 @@
 {
     "name": "@slk333/lib-ogame",
     "type": "module",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "ogame related data and functionalities",
     "main": "./dist/index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "rimraf dist && tsc --declaration"
     },
     "author": "slk333",
     "license": "ISC",
     "devDependencies": {
+        "rimraf": "^6.0.1",
         "typescript": "^4.9.5"
     },
     "files": [
