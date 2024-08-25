@@ -1,15 +1,21 @@
 {
     "name": "@slk333/lib-ogame",
+    "description": "ogame library to compute production, cost, and construction time",
+    "author": "slk333 aka Antoine Weber",
+    "repository": {
+        "url": "https://github.com/slk333/lib-ogame.git",
+        "type": "git"
+    },
+    "homepage": "https://github.com/slk333/lib-ogame.git",
+    "license": "MIT",
+    "version": "0.2.3",
     "type": "module",
-    "version": "0.2.2",
-    "description": "ogame related data and functionalities",
     "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rimraf dist && tsc --declaration"
     },
-    "author": "slk333",
-    "license": "ISC",
     "devDependencies": {
         "rimraf": "^6.0.1",
         "typescript": "^4.9.5"
