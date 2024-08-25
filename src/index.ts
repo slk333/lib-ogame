@@ -1,10 +1,9 @@
+// production
 export { getMetalMineProduction_s } from "./production.js"
 export { getCrystalMineProduction_s } from "./production.js"
 export { getDeuteriumProduction_s } from "./production.js"
-
-export { getStructureConstructionTime } from "./lib-ogame.js"
-export { getStructureCompoundedCost } from "./lib-ogame.js"
-
-export { getStructureUpgradeCost } from "./lib-ogame.js"
-
-export { Structure } from "./Structure.js"
+// cost
+export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/structureCost.js"
+export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
+// util
+export { Structure } from "./types.js"

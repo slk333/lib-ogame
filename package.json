@@ -1,19 +1,19 @@
 {
-  "name": "@slk333/lib-ogame",
-  "type": "module",
-  "version": "0.1.6",
-  "description": "ogame related data and functionalities",
-  "main": "./dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "slk333",
-  "license": "ISC",
-  "devDependencies": {
-    "typescript": "^4.9.5"
-  },
-  "files": [
-    "dist/",
-    "src/"
-  ]
+    "name": "@slk333/lib-ogame",
+    "type": "module",
+    "version": "0.2.0",
+    "description": "ogame related data and functionalities",
+    "main": "./dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "slk333",
+    "license": "ISC",
+    "devDependencies": {
+        "typescript": "^4.9.5"
+    },
+    "files": [
+        "dist/",
+        "src/"
+    ]
 }
