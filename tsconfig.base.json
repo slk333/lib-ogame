@@ -8,7 +8,9 @@
     "declaration": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "isolatedModules": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

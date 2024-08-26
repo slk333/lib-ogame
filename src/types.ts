@@ -4,7 +4,7 @@ export interface ResourceCost {
     deuteriumAmount: number
 }
 
-export const enum Structure {
+export enum Structure {
     MetalMine = "metalMine",
     CrystalMine = "crystalMine",
     DeuteriumSynthesizer = "deuteriumSynthesizer",
