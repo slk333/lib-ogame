@@ -11,7 +11,7 @@ import { getMetalMineCost, getCrystalMineCost, getDeuteriumMineCost } from "./mi
 function computeStructureCompoundedCost(
     achievedLevel: number,
     costFunction: (targetLevel: number) => ResourceCost,
-    growthCoefficient: number
+    growthCoefficient: number,
 ) {
     const metalNextLevelCost = costFunction(achievedLevel + 1).metalAmount ?? 0
     const metalBaseCost = costFunction(1).metalAmount ?? 0
