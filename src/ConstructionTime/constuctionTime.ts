@@ -1,9 +1,9 @@
 import { getStructureUpgradeCost } from "../Cost/structureCost.js"
-import { Structure } from "../types.js"
+import { StructureName } from "../types.js"
 
 /* 1.2  Construction Time */
 export function getStructureConstructionTime(
-    name: Structure,
+    name: StructureName,
     targetLevel: number,
     roboticsFactoryLevel: number,
     naniteFactoryLevel: number

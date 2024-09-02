@@ -1,4 +1,4 @@
-import { Structure } from "../types.js"
+import { StructureName } from "../types.js"
 import { ResourceCost } from "../types.js"
 import {
     getRoboticsFactoryCost,
@@ -11,7 +11,7 @@ import { getMetalMineCost, getCrystalMineCost, getDeuteriumMineCost } from "./mi
 function computeStructureCompoundedCost(
     achievedLevel: number,
     costFunction: (targetLevel: number) => ResourceCost,
-    growthCoefficient: number,
+    growthCoefficient: number
 ) {
     const metalNextLevelCost = costFunction(achievedLevel + 1).metalAmount ?? 0
     const metalBaseCost = costFunction(1).metalAmount ?? 0
@@ -28,7 +28,7 @@ function computeStructureCompoundedCost(
     return { metalCompoundedCost, crystalCompoundedCost, deuteriumCompoundedCost }
 }
 
-export function getStructureCompoundedCost(name: Structure, achievedLevel: number) {
+export function getStructureCompoundedCost(name: StructureName, achievedLevel: number) {
     /*   { 
 	metalCompoundedCost, 
 	crystalCompoundedCost, 
@@ -37,25 +37,25 @@ export function getStructureCompoundedCost(name: Structure, achievedLevel: numbe
  */
 
     switch (name) {
-        case Structure.MetalMine:
+        case "metalMine":
             return computeStructureCompoundedCost(achievedLevel, getMetalMineCost, 0.5)
 
-        case Structure.CrystalMine:
+        case "crystalMine":
             return computeStructureCompoundedCost(achievedLevel, getCrystalMineCost, 0.6)
 
-        case Structure.DeuteriumSynthesizer:
+        case "deuteriumSynthesizer":
             return computeStructureCompoundedCost(achievedLevel, getDeuteriumMineCost, 0.5)
 
-        case Structure.RoboticsFactory:
+        case "roboticsFactory":
             return computeStructureCompoundedCost(achievedLevel, getRoboticsFactoryCost, 1)
 
-        case Structure.Shipyard:
+        case "shipyard":
             return computeStructureCompoundedCost(achievedLevel, getShipyardCost, 1)
 
-        case Structure.ResearchLab:
+        case "researchLab":
             return computeStructureCompoundedCost(achievedLevel, getResearchLabCost, 1)
 
-        case Structure.NaniteFactory:
+        case "naniteFactory":
             return computeStructureCompoundedCost(achievedLevel, getNaniteFactoryCost, 1)
 
         default:
@@ -68,27 +68,27 @@ export function getStructureCompoundedCost(name: Structure, achievedLevel: numbe
     //   return Math.trunc(compoundCost / 1000)
 }
 
-export function getStructureUpgradeCost(name: Structure, targetLevel: number) {
+export function getStructureUpgradeCost(name: StructureName, targetLevel: number) {
     switch (name) {
-        case Structure.MetalMine:
+        case "metalMine":
             return getMetalMineCost(targetLevel)
 
-        case Structure.CrystalMine:
+        case "crystalMine":
             return getCrystalMineCost(targetLevel)
 
-        case Structure.DeuteriumSynthesizer:
+        case "deuteriumSynthesizer":
             return getDeuteriumMineCost(targetLevel)
 
-        case Structure.RoboticsFactory:
+        case "roboticsFactory":
             return getRoboticsFactoryCost(targetLevel)
 
-        case Structure.Shipyard:
+        case "shipyard":
             return getShipyardCost(targetLevel)
 
-        case Structure.ResearchLab:
+        case "researchLab":
             return getResearchLabCost(targetLevel)
 
-        case Structure.NaniteFactory:
+        case "naniteFactory":
             return getNaniteFactoryCost(targetLevel)
 
         default:

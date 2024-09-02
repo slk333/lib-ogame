@@ -4,12 +4,11 @@ export interface ResourceCost {
     deuteriumAmount: number
 }
 
-export enum Structure {
-    MetalMine = "metalMine",
-    CrystalMine = "crystalMine",
-    DeuteriumSynthesizer = "deuteriumSynthesizer",
-    RoboticsFactory = "roboticsFactory",
-    Shipyard = "shipyard",
-    ResearchLab = "researchLab",
-    NaniteFactory = "naniteFactory",
-}
+export type StructureName =
+    | "metalMine"
+    | "crystalMine"
+    | "deuteriumSynthesizer"
+    | "roboticsFactory"
+    | "shipyard"
+    | "researchLab"
+    | "naniteFactory"
