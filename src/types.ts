@@ -12,3 +12,8 @@ export type StructureName =
     | "shipyard"
     | "researchLab"
     | "naniteFactory"
+
+export interface PlanetStructure {
+    level: number
+    name: StructureName
+}

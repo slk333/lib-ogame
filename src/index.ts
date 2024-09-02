@@ -8,4 +8,4 @@ export {
 export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/structureCost.js"
 export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
 // util
-export type { StructureName } from "./types.js"
+export type { StructureName, PlanetStructure } from "./types.js"
