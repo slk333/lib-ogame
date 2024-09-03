@@ -1,3 +1,4 @@
+import { Coordinates } from "./Coordinates"
 import { PlanetStructure } from "./PlanetStructure"
 import { StructureName } from "./StructureName"
 
@@ -10,11 +11,7 @@ export interface FirestorePlanet {
         name: string
     }
 
-    coordinates: {
-        galaxy: number
-        solarSystem: number
-        planetPosition: number
-    }
+    coordinates: Coordinates
 
     structures: Record<StructureName, PlanetStructure>
     fleet: {
