@@ -9,3 +9,4 @@ export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/stru
 export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
 // util
 export type { StructureName, PlanetStructure } from "./types.js"
+export type { FirestorePlayer } from "./ogameclassic_types.js"

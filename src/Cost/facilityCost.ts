@@ -1,4 +1,4 @@
-import { ResourceCost } from "../types.js"
+import { ResourceCost } from "../Types/ResourceCost.js"
 
 export function getRoboticsFactoryCost(targetLevel: number): ResourceCost {
     /* 400 M, 120 C, 200 D. */

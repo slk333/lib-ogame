@@ -1,5 +1,5 @@
 import { getStructureUpgradeCost } from "../Cost/structureCost.js"
-import { StructureName } from "../types.js"
+import { StructureName } from "../Types/StructureName.js"
 
 /* 1.2  Construction Time */
 export function getStructureConstructionTime(

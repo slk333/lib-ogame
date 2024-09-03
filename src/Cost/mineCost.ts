@@ -1,4 +1,4 @@
-import { ResourceCost } from "../types.js"
+import { ResourceCost } from "../Types/ResourceCost.js"
 
 /* 1.0 Cost */
 export function getMetalMineCost(targetLevel: number): ResourceCost {

@@ -1,5 +1,5 @@
-import { StructureName } from "../types.js"
-import { ResourceCost } from "../types.js"
+import { StructureName } from "../Types/StructureName.js"
+import { ResourceCost } from "../Types/ResourceCost.js"
 import {
     getRoboticsFactoryCost,
     getShipyardCost,
