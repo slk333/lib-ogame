@@ -12,6 +12,6 @@ export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime
 export type { FirestorePlanet } from "./Types/FirestorePlanet.js"
 export type { FirestorePlayer } from "./Types/FirestorePlayer.js"
 export type { PlanetStructure } from "./Types/PlanetStructure.js"
-export type { RankingDictionary } from "./Types/RankingDictionary.js"
+export type { RankingDictionary, PlayerScore, PlanetScore } from "./Types/RankingDictionary.js"
 export type { ResourceCost } from "./Types/ResourceCost.js"
 export type { StructureName } from "./Types/StructureName.js"
