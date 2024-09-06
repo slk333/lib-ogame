@@ -1,3 +1,9 @@
+// helper
+export { computeResourcesForPlanetAtDate } from "./Helpers/computeResourcesForPlanetAtDate.js"
+export { computeProductionForPlanet } from "./Helpers/computeProductionForPlanet.js"
+export { computeStructureUpgradeCostForPlanet } from "./Helpers/computeStructureUpgradeCostForPlanet.js"
+export { computeStructureUpgradeTimeForPlanet } from "./Helpers/computeStructureUpgradeTimeForPlanet.js"
+
 // production
 export {
     getMetalMineProduction_s,
