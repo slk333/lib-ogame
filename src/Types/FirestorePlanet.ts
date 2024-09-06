@@ -30,9 +30,9 @@ export interface FirestorePlanet {
     pendingStructure?: {
         name: StructureName
         completionDate: string
-    }
+    } | null
 
     snapshotDate: string
 
-    structureQueue?: StructureName[]
+    structureQueue?: StructureName[] | null
 }
