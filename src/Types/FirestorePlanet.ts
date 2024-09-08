@@ -1,5 +1,6 @@
 import { Coordinates } from "./Coordinates"
 import { PlanetStructure } from "./PlanetStructure"
+import { ShipName } from "./ShipName"
 import { StructureName } from "./StructureName"
 
 export interface FirestorePlanet {
@@ -15,8 +16,8 @@ export interface FirestorePlanet {
 
     structures: Record<StructureName, PlanetStructure>
     fleet: {
-        colonyShip?: {
-            name: string
+        [shipName in ShipName]?: {
+            name: ShipName
             count: number
         }
     }
