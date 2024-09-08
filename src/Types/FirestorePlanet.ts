@@ -15,6 +15,7 @@ export interface FirestorePlanet {
     coordinates: Coordinates
 
     structures: Record<StructureName, PlanetStructure>
+
     fleet: {
         [shipName in ShipName]?: {
             name: ShipName
@@ -28,12 +29,12 @@ export interface FirestorePlanet {
         deuterium: number
     }
 
-    pendingStructure?: {
+    snapshotDate: string
+
+    pendingStructure: {
         name: StructureName
         completionDate: string
     } | null
 
-    snapshotDate: string
-
-    structureQueue?: StructureName[] | null
+    structureQueue: StructureName[]
 }
