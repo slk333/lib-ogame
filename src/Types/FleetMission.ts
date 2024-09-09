@@ -1,5 +1,6 @@
 import { Coordinates } from "./Coordinates"
 import { ResourcesRecord } from "./ResourcesRecord"
+import { ShipName } from "./ShipName"
 
 export type FleetMissionType = "Expedition" | "Spy"
 export type FleetMissionStatus = "pendingArrival" | "returning" | "returned"
@@ -10,12 +11,8 @@ export interface FleetMission {
     status: FleetMissionStatus
 
     ships: {
-        battleship?: {
-            name: string
-            count: number
-        }
-        cruiser?: {
-            name: string
+        [shipName in ShipName]?: {
+            name: ShipName
             count: number
         }
     }
@@ -50,5 +47,5 @@ export interface FleetMission {
     arrivalDate: string
     returnDate: string
 
-    expireAt?: string
+    expireAt: Date // timestamp for firestore periodic deletion, set to return date + 24hours
 }

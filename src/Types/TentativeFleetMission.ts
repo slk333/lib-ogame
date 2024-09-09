@@ -1,10 +1,11 @@
 import { FleetMissionType } from "./FleetMission"
+import { ShipName } from "./ShipName"
 
 export interface TentativeFleetMission {
     type: FleetMissionType
     ships: {
-        [key: string]: {
-            name: string
+        [shipName in ShipName]?: {
+            name: ShipName
             count: number
         }
     }
