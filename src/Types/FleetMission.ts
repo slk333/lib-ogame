@@ -47,5 +47,7 @@ export interface FleetMission {
     arrivalDate: string
     returnDate: string
 
-    expireAt: Date // timestamp for firestore periodic deletion, set to return date + 24hours
+    expireAt?: Date
+    // timestamp for firestore periodic deletion, set to return date + 24hours
+    // set type to Date so it's stored as Timestamp in the DB
 }
