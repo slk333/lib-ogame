@@ -1,8 +1,3 @@
-export type StructureName =
-    | "metalMine"
-    | "crystalMine"
-    | "deuteriumSynthesizer"
-    | "roboticsFactory"
-    | "shipyard"
-    | "researchLab"
-    | "naniteFactory"
+import { structureNames } from "../Collections/structureNames"
+
+export type StructureName = (typeof structureNames)[number]

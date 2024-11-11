@@ -14,6 +14,8 @@ export {
 export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/structureCost.js"
 export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
 // util
+export { shipNames } from "./Collections/shipNames.js"
+export { structureNames } from "./Collections/structureNames.js"
 
 export type { FirestorePlanet } from "./Types/FirestorePlanet.js"
 export type { FirestorePlayer } from "./Types/FirestorePlayer.js"

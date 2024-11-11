@@ -1,17 +1,3 @@
-export type ShipName =
-    | "lightFighter"
-    | "heavyFighter"
-    | "cruiser"
-    | "battleship"
-    | "battlecruiser"
-    | "bomber"
-    | "destroyer"
-    | "reaper"
-    | "pathfinder"
-    | "smallCargo"
-    | "largeCargo"
-    | "colonyShip"
-    | "recycler"
-    | "espionageProbe"
-    | "solarSatellite"
-    | "crawler"
+import { shipNames } from "../Collections/shipNames"
+
+export type ShipName = (typeof shipNames)[number]
