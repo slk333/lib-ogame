@@ -1,9 +1,8 @@
-import { Coordinates } from "./Coordinates"
-import { ResourcesRecord } from "./ResourcesRecord"
-import { ShipName } from "./ShipName"
-
-export type FleetMissionType = "Expedition" | "Spy"
-export type FleetMissionStatus = "pendingArrival" | "returning" | "returned"
+import { Coordinates } from "../Coordinates"
+import { ResourcesRecord } from "../ResourcesRecord"
+import { ShipName } from "../Shipyard/ShipName"
+import { FleetMissionStatus } from "./FleetMissionStatus"
+import { FleetMissionType } from "./FleetMissionType"
 
 export interface FleetMission {
     id: string

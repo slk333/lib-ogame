@@ -1,7 +1,7 @@
 import { getStructureUpgradeCost } from "../Cost/structureCost"
 import { FirestorePlanet } from "../Types/FirestorePlanet"
 import { ResourcesRecord } from "../Types/ResourcesRecord"
-import { StructureName } from "../Types/StructureName"
+import { StructureName } from "../Types/Structure/StructureName"
 
 export function computeStructureUpgradeCostForPlanet(
     firestorePlanet: FirestorePlanet,

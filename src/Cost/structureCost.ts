@@ -1,4 +1,4 @@
-import { StructureName } from "../Types/StructureName.js"
+import { StructureName } from "../Types/Structure/StructureName.js"
 import { ResourceCost } from "../Types/ResourceCost.js"
 import {
     getRoboticsFactoryCost,

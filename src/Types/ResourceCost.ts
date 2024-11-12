@@ -1,5 +1,3 @@
-export interface ResourceCost {
-    metalAmount: number
-    crystalAmount: number
-    deuteriumAmount: number
-}
+import { ResourcesRecord } from "./ResourcesRecord"
+
+export type ResourceCost = ResourcesRecord

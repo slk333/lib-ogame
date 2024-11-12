@@ -1,5 +1,5 @@
-import { FleetMissionType } from "./FleetMission"
-import { ShipName } from "./ShipName"
+import { FleetMissionType } from "./FleetMissionType"
+import { ShipName } from "../Shipyard/ShipName"
 
 export interface TentativeFleetMission {
     type: FleetMissionType

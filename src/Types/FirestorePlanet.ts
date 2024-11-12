@@ -1,7 +1,9 @@
 import { Coordinates } from "./Coordinates"
-import { PlanetStructure } from "./PlanetStructure"
-import { ShipName } from "./ShipName"
-import { StructureName } from "./StructureName"
+import { PlanetStructure } from "./Structure/PlanetStructure"
+import { ShipName } from "./Shipyard/ShipName"
+import { ScheduledShipyardOrder } from "./Shipyard/ScheduledShipyardOrder"
+import { ShipyardUnit } from "./Shipyard/ShipyardUnit"
+import { StructureName } from "./Structure/StructureName"
 
 export interface FirestorePlanet {
     id: string
@@ -37,5 +39,11 @@ export interface FirestorePlanet {
         completionDate: string
     } | null
 
+    pendingShipyardUnit: {
+        shipyardUnit: ShipyardUnit
+        completionDate: string
+    }
+
     structureQueue: StructureName[]
+    shipyardQueue: ScheduledShipyardOrder[]
 }

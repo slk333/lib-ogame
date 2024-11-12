@@ -1,6 +1,6 @@
 import { getStructureConstructionTime } from "../ConstructionTime/constuctionTime"
 import { FirestorePlanet } from "../Types/FirestorePlanet"
-import { StructureName } from "../Types/StructureName"
+import { StructureName } from "../Types/Structure/StructureName"
 
 export function computeStructureUpgradeTimeForPlanet(
     planet: FirestorePlanet,
