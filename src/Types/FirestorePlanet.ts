@@ -42,7 +42,7 @@ export interface FirestorePlanet {
     pendingShipyardUnit: {
         shipyardUnit: ShipyardUnit
         completionDate: string
-    }
+    } | null
 
     structureQueue: StructureName[]
     shipyardQueue: ScheduledShipyardOrder[]
