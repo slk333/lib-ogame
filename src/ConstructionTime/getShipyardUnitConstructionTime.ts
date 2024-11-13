@@ -20,5 +20,3 @@ export function getShipyardUnitConstructionTime(
 
     return Math.max(Math.floor(timeInSeconds), 1)
 }
-
-export default getShipyardUnitConstructionTime

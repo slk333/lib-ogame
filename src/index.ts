@@ -11,9 +11,13 @@ export {
     getDeuteriumProduction_s,
 } from "./Production/production.js"
 
+// Construction Time
+export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
+export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
 // Cost
 export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/structureCost.js"
-export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
+export { getShipCost } from "./Cost/getShipCost.js"
+export { getDefenseCost } from "./Cost/getDefenseCost.js"
 
 // Collections
 export { shipNames } from "./Collections/shipNames.js"
