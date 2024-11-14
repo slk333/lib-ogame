@@ -2,7 +2,7 @@ import { FirestorePlanet } from "../Types/FirestorePlanet.js"
 import { ResourcesRecord } from "../Types/ResourcesRecord.js"
 import { computeProductionForPlanet } from "./computeProductionForPlanet.js"
 
-function computeResourcesForPlanetAtDate(
+export function computeResourcesForPlanetAtDate(
     firestorePlanet: FirestorePlanet,
     requestedDate: Date
 ): ResourcesRecord {
@@ -29,5 +29,3 @@ function computeResourcesForPlanetAtDate(
     }
     return resourcesAtRequestedDate
 }
-
-export { computeResourcesForPlanetAtDate }

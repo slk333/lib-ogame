@@ -5,7 +5,6 @@ export { computeStructureUpgradeCostForPlanet } from "./Helpers/computeStructure
 export { computeStructureUpgradeTimeForPlanet } from "./Helpers/computeStructureUpgradeTimeForPlanet.js"
 export { computeHasEnoughResources } from "./Helpers/computeHasEnoughResources.js"
 export { computeRemainingResources } from "./Helpers/computeRemainingResources.js"
-
 // Production
 export {
     getMetalMineProduction_s,
@@ -26,6 +25,7 @@ export { getShipyardUnitCost } from "./Cost/getShipyardUnitCost.js"
 // Collections
 export { shipNames } from "./Collections/shipNames.js"
 export { structureNames } from "./Collections/structureNames.js"
+export { defenseNames } from "./Collections/defenseNames.js"
 
 // Types
 export type { FirestorePlanet } from "./Types/FirestorePlanet.js"
