@@ -3,6 +3,8 @@ export { computeResourcesForPlanetAtDate } from "./Helpers/computeResourcesForPl
 export { computeProductionForPlanet } from "./Helpers/computeProductionForPlanet.js"
 export { computeStructureUpgradeCostForPlanet } from "./Helpers/computeStructureUpgradeCostForPlanet.js"
 export { computeStructureUpgradeTimeForPlanet } from "./Helpers/computeStructureUpgradeTimeForPlanet.js"
+export { computeHasEnoughResources } from "./Helpers/computeHasEnoughResources.js"
+export { computeRemainingResources } from "./Helpers/computeRemainingResources.js"
 
 // Production
 export {

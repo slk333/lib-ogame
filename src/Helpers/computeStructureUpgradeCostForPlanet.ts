@@ -9,5 +9,5 @@ export function computeStructureUpgradeCostForPlanet(
 ): ResourcesRecord {
     const targetLevel = firestorePlanet.structures[structureName].level + 1
     const upgradeCost = getStructureUpgradeCost(structureName, targetLevel)
-    return upgradeCost as ResourcesRecord
+    return upgradeCost
 }
