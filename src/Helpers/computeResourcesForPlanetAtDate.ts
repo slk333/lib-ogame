@@ -19,11 +19,7 @@ function computeResourcesForPlanetAtDate(
     const producedDeuteriumAmount = elapsedTime_s * deuteriumProduction_s
 
     // pre-existing resources at snapshot
-    const preExistingResources: ResourcesRecord = {
-        metalAmount: firestorePlanet.resources.metal,
-        crystalAmount: firestorePlanet.resources.crystal,
-        deuteriumAmount: firestorePlanet.resources.deuterium,
-    }
+    const preExistingResources: ResourcesRecord = firestorePlanet.resources
 
     // sum of pre-existing + produced
     const resourcesAtRequestedDate: ResourcesRecord = {

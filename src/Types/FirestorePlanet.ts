@@ -4,6 +4,7 @@ import { ShipName } from "./Shipyard/ShipName"
 import { ScheduledShipyardOrder } from "./Shipyard/ScheduledShipyardOrder"
 import { ShipyardUnit } from "./Shipyard/ShipyardUnit"
 import { StructureName } from "./Structure/StructureName"
+import { ResourcesRecord } from "./ResourcesRecord"
 
 export interface FirestorePlanet {
     id: string
@@ -26,11 +27,7 @@ export interface FirestorePlanet {
         }
     }
 
-    resources: {
-        metal: number
-        crystal: number
-        deuterium: number
-    }
+    resources: ResourcesRecord
 
     snapshotDate: string
 
