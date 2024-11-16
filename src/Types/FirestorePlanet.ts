@@ -19,13 +19,7 @@ export interface FirestorePlanet {
 
     structures: Record<StructureName, PlanetStructure>
 
-    fleet: {
-        // TODO should be renamed to ships
-        [shipName in ShipName]?: {
-            name: ShipName
-            count: number
-        }
-    }
+    ships: Record<ShipName, { name: ShipName; count: number }>
 
     resources: ResourcesRecord
 

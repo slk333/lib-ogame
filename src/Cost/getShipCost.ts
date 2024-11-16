@@ -45,6 +45,11 @@ const SHIP_COSTS: Record<ShipName, ResourceCost> = {
         crystalAmount: 50000,
         deuteriumAmount: 15000,
     },
+    deathstar: {
+        metalAmount: 5_000_000,
+        crystalAmount: 4_000_000,
+        deuteriumAmount: 1_000_000,
+    },
     reaper: {
         metalAmount: 85000,
         crystalAmount: 55000,

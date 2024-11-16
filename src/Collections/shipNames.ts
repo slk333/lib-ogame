@@ -6,6 +6,7 @@ export const shipNames = [
     "battlecruiser",
     "bomber",
     "destroyer",
+    "deathstar",
     "reaper",
     "pathfinder",
     "smallCargo",
