@@ -5,6 +5,7 @@ export { computeStructureUpgradeCostForPlanet } from "./Helpers/computeStructure
 export { computeStructureUpgradeTimeForPlanet } from "./Helpers/computeStructureUpgradeTimeForPlanet.js"
 export { computeHasEnoughResources } from "./Helpers/computeHasEnoughResources.js"
 export { computeRemainingResources } from "./Helpers/computeRemainingResources.js"
+export { computeMaxBuildableCountForUnit } from "./Helpers/computeMaxBuildableCountForUnit.js"
 // Production
 export {
     getMetalMineProduction_s,
