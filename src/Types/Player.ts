@@ -1,4 +1,4 @@
-export interface FirestorePlayer {
+export interface Player {
     id: string
     createdAt: string
     email: string

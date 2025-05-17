@@ -154,7 +154,7 @@ export interface PublicPlayer {
     name: string
 }
 
-export interface FirestorePlayer {
+export interface Player {
     id: string
     createdAt: string
     email: string
@@ -174,7 +174,7 @@ export interface PublicPlanet {
     coordinates: Coordinates
 }
 
-export interface FirestorePlanet {
+export interface Planet {
     id: string
     name: string
 

@@ -31,8 +31,8 @@ export { structureNames } from "./Collections/structureNames.js"
 export { defenseNames } from "./Collections/defenseNames.js"
 
 // Types
-export type { FirestorePlanet } from "./Types/FirestorePlanet.js"
-export type { FirestorePlayer } from "./Types/FirestorePlayer.js"
+export type { Planet } from "./Types/Planet.js"
+export type { Player } from "./Types/Player.js"
 export type { PlanetStructure } from "./Types/Structure/PlanetStructure.js"
 export type { RankingDictionary, PlayerScore, PlanetScore } from "./Types/RankingDictionary.js"
 export type { ResourceCost } from "./Types/ResourceCost.js"

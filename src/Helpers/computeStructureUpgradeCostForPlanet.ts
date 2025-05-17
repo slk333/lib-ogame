@@ -1,13 +1,13 @@
 import { getStructureUpgradeCost } from "../Cost/structureCost"
-import { FirestorePlanet } from "../Types/FirestorePlanet"
+import { Planet } from "../Types/Planet"
 import { ResourcesRecord } from "../Types/ResourcesRecord"
 import { StructureName } from "../Types/Structure/StructureName"
 
 export function computeStructureUpgradeCostForPlanet(
-    firestorePlanet: FirestorePlanet,
+    Planet: Planet,
     structureName: StructureName
 ): ResourcesRecord {
-    const targetLevel = firestorePlanet.structures[structureName].level + 1
+    const targetLevel = Planet.structures[structureName].level + 1
     const upgradeCost = getStructureUpgradeCost(structureName, targetLevel)
     return upgradeCost
 }

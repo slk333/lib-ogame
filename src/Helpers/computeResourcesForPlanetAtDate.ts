@@ -1,17 +1,17 @@
-import { FirestorePlanet } from "../Types/FirestorePlanet.js"
+import { Planet } from "../Types/Planet.js"
 import { ResourcesRecord } from "../Types/ResourcesRecord.js"
 import { computeProductionForPlanet } from "./computeProductionForPlanet.js"
 
 export function computeResourcesForPlanetAtDate(
-    firestorePlanet: FirestorePlanet,
+    Planet: Planet,
     requestedDate: Date
 ): ResourcesRecord {
-    const snapshotDate = new Date(firestorePlanet.snapshotDate) // from ISO
+    const snapshotDate = new Date(Planet.snapshotDate) // from ISO
     const elapsedTime_s = (requestedDate.getTime() - snapshotDate.getTime()) / 1000
 
     // planet production per second
     const { metalProduction_s, crystalProduction_s, deuteriumProduction_s } =
-        computeProductionForPlanet(firestorePlanet)
+        computeProductionForPlanet(Planet)
 
     // produced resources at requestedDate
     const producedMetalAmount = elapsedTime_s * metalProduction_s
@@ -19,7 +19,7 @@ export function computeResourcesForPlanetAtDate(
     const producedDeuteriumAmount = elapsedTime_s * deuteriumProduction_s
 
     // pre-existing resources at snapshot
-    const preExistingResources: ResourcesRecord = firestorePlanet.resources
+    const preExistingResources: ResourcesRecord = Planet.resources
 
     // sum of pre-existing + produced
     const resourcesAtRequestedDate: ResourcesRecord = {

@@ -3,7 +3,7 @@ import {
     getDeuteriumProduction_s,
     getMetalMineProduction_s,
 } from "../Production/production"
-import { FirestorePlanet } from "../Types/FirestorePlanet"
+import { Planet } from "../Types/Planet"
 
 type ResourcesProduction_s = {
     metalProduction_s: number
@@ -11,7 +11,7 @@ type ResourcesProduction_s = {
     deuteriumProduction_s: number
 }
 
-export function computeProductionForPlanet(planet: FirestorePlanet): ResourcesProduction_s {
+export function computeProductionForPlanet(planet: Planet): ResourcesProduction_s {
     /* 0.1 native production */
     const nativeProduction_s = {
         metalProduction_s: 30 / 3600,

@@ -6,7 +6,7 @@ import { ShipyardUnit } from "./Shipyard/ShipyardUnit"
 import { StructureName } from "./Structure/StructureName"
 import { ResourcesRecord } from "./ResourcesRecord"
 
-export interface FirestorePlanet {
+export interface Planet {
     id: string
     name: string
 
