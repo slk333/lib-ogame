@@ -1,3 +1,3 @@
-import { ResourcesRecord } from "./ResourcesRecord"
+import { ResourcesRecord } from "./ResourcesRecord.js"
 
 export type ResourceCost = ResourcesRecord

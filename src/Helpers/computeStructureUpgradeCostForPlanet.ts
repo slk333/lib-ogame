@@ -1,7 +1,7 @@
-import { getStructureUpgradeCost } from "../Cost/structureCost"
-import { Planet } from "../Types/Planet"
-import { ResourcesRecord } from "../Types/ResourcesRecord"
-import { StructureName } from "../Types/Structure/StructureName"
+import { getStructureUpgradeCost } from "../Cost/structureCost.js"
+import { Planet } from "../Types/Planet.js"
+import { ResourcesRecord } from "../Types/ResourcesRecord.js"
+import { StructureName } from "../Types/Structure/StructureName.js"
 
 export function computeStructureUpgradeCostForPlanet(
     Planet: Planet,

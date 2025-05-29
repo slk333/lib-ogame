@@ -1,5 +1,5 @@
-import { DefenseName } from "./DefenseName"
-import { ShipName } from "./ShipName"
+import { DefenseName } from "./DefenseName.js"
+import { ShipName } from "./ShipName.js"
 
 export interface ShipyardUnit {
     type: "ship" | "defense"

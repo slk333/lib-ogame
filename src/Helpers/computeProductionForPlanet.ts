@@ -2,8 +2,8 @@ import {
     getCrystalMineProduction_s,
     getDeuteriumProduction_s,
     getMetalMineProduction_s,
-} from "../Production/production"
-import { Planet } from "../Types/Planet"
+} from "../Production/production.js"
+import { Planet } from "../Types/Planet.js"
 
 type ResourcesProduction_s = {
     metalProduction_s: number

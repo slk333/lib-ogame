@@ -1,5 +1,5 @@
-import { ResourceCost } from "../Types/ResourceCost"
-import { DefenseName } from "../Types/Shipyard/DefenseName"
+import { ResourceCost } from "../Types/ResourceCost.js"
+import { DefenseName } from "../Types/Shipyard/DefenseName.js"
 
 export function getDefenseCost(defenseName: DefenseName): ResourceCost {
     const cost = DEFENSE_COSTS[defenseName]

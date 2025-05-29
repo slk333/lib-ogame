@@ -1,4 +1,4 @@
-import { ResourcesRecord } from "../Types/ResourcesRecord"
+import { ResourcesRecord } from "../Types/ResourcesRecord.js"
 
 export function computeHasEnoughResources(
     availableResources: ResourcesRecord,

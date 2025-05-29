@@ -1,5 +1,5 @@
-import { FleetMissionType } from "./FleetMissionType"
-import { ShipName } from "../Shipyard/ShipName"
+import { FleetMissionType } from "./FleetMissionType.js"
+import { ShipName } from "../Shipyard/ShipName.js"
 
 export interface TentativeFleetMission {
     type: FleetMissionType

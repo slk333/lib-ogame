@@ -1,6 +1,6 @@
-import { getStructureConstructionTime } from "../ConstructionTime/constuctionTime"
-import { Planet } from "../Types/Planet"
-import { StructureName } from "../Types/Structure/StructureName"
+import { getStructureConstructionTime } from "../ConstructionTime/constuctionTime.js"
+import { Planet } from "../Types/Planet.js"
+import { StructureName } from "../Types/Structure/StructureName.js"
 
 export function computeStructureUpgradeTimeForPlanet(
     planet: Planet,

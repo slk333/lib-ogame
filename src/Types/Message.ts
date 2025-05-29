@@ -1,4 +1,4 @@
-import { PublicPlayer } from "./PublicPlayer"
+import { PublicPlayer } from "./PublicPlayer.js"
 
 export interface Message {
     readonly id: string

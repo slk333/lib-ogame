@@ -1,5 +1,5 @@
-import { ResourceCost } from "../Types/ResourceCost"
-import { ResourcesRecord } from "../Types/ResourcesRecord"
+import { ResourceCost } from "../Types/ResourceCost.js"
+import { ResourcesRecord } from "../Types/ResourcesRecord.js"
 
 export function computeMaxBuildableCountForUnit(
     availableResources: ResourcesRecord,

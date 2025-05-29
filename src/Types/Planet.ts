@@ -1,10 +1,10 @@
-import { Coordinates } from "./Coordinates"
-import { PlanetStructure } from "./Structure/PlanetStructure"
-import { ShipName } from "./Shipyard/ShipName"
-import { ScheduledShipyardOrder } from "./Shipyard/ScheduledShipyardOrder"
-import { ShipyardUnit } from "./Shipyard/ShipyardUnit"
-import { StructureName } from "./Structure/StructureName"
-import { ResourcesRecord } from "./ResourcesRecord"
+import { Coordinates } from "./Coordinates.js"
+import { PlanetStructure } from "./Structure/PlanetStructure.js"
+import { ShipName } from "./Shipyard/ShipName.js"
+import { ScheduledShipyardOrder } from "./Shipyard/ScheduledShipyardOrder.js"
+import { ShipyardUnit } from "./Shipyard/ShipyardUnit.js"
+import { StructureName } from "./Structure/StructureName.js"
+import { ResourcesRecord } from "./ResourcesRecord.js"
 
 export interface Planet {
     id: string

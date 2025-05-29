@@ -1,5 +1,5 @@
-import { ResourcesRecord } from "../Types/ResourcesRecord"
-import { computeHasEnoughResources } from "./computeHasEnoughResources"
+import { ResourcesRecord } from "../Types/ResourcesRecord.js"
+import { computeHasEnoughResources } from "./computeHasEnoughResources.js"
 
 export function computeRemainingResources(
     availableResources: ResourcesRecord,

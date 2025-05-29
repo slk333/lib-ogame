@@ -1,4 +1,4 @@
-import { Coordinates } from "./Coordinates"
+import { Coordinates } from "./Coordinates.js"
 
 export interface PublicPlanet {
     id: string

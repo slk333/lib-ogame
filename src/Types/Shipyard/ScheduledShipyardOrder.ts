@@ -1,4 +1,4 @@
-import { ShipyardOrder } from "./ShipyardOrder"
+import { ShipyardOrder } from "./ShipyardOrder.js"
 
 export interface ScheduledShipyardOrder {
     order: ShipyardOrder

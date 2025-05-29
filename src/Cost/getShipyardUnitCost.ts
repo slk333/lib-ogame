@@ -1,10 +1,10 @@
-import { defenseNames } from "../Collections/defenseNames"
-import { shipNames } from "../Collections/shipNames"
-import { ResourceCost } from "../Types/ResourceCost"
-import { DefenseName } from "../Types/Shipyard/DefenseName"
-import { ShipName } from "../Types/Shipyard/ShipName"
-import { getDefenseCost } from "./getDefenseCost"
-import { getShipCost } from "./getShipCost"
+import { defenseNames } from "../Collections/defenseNames.js"
+import { shipNames } from "../Collections/shipNames.js"
+import { ResourceCost } from "../Types/ResourceCost.js"
+import { DefenseName } from "../Types/Shipyard/DefenseName.js"
+import { ShipName } from "../Types/Shipyard/ShipName.js"
+import { getDefenseCost } from "./getDefenseCost.js"
+import { getShipCost } from "./getShipCost.js"
 
 export function getShipyardUnitCost(unitName: ShipName | DefenseName): ResourceCost {
     if (shipNames.includes(unitName as ShipName)) {

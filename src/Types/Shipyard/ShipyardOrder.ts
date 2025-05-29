@@ -1,4 +1,4 @@
-import { ShipyardUnit } from "./ShipyardUnit"
+import { ShipyardUnit } from "./ShipyardUnit.js"
 
 export interface ShipyardOrder {
     unit: ShipyardUnit

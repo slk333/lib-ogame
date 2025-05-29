@@ -1,8 +1,8 @@
-import { Coordinates } from "../Coordinates"
-import { ResourcesRecord } from "../ResourcesRecord"
-import { ShipName } from "../Shipyard/ShipName"
-import { FleetMissionStatus } from "./FleetMissionStatus"
-import { FleetMissionType } from "./FleetMissionType"
+import { Coordinates } from "../Coordinates.js"
+import { ResourcesRecord } from "../ResourcesRecord.js"
+import { ShipName } from "../Shipyard/ShipName.js"
+import { FleetMissionStatus } from "./FleetMissionStatus.js"
+import { FleetMissionType } from "./FleetMissionType.js"
 
 export interface FleetMission {
     id: string

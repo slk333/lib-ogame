@@ -1,8 +1,8 @@
-import { getDefenseCost } from "../Cost/getDefenseCost"
-import { getShipCost } from "../Cost/getShipCost"
-import { DefenseName } from "../Types/Shipyard/DefenseName"
-import { ShipName } from "../Types/Shipyard/ShipName"
-import { ShipyardUnit } from "../Types/Shipyard/ShipyardUnit"
+import { getDefenseCost } from "../Cost/getDefenseCost.js"
+import { getShipCost } from "../Cost/getShipCost.js"
+import { DefenseName } from "../Types/Shipyard/DefenseName.js"
+import { ShipName } from "../Types/Shipyard/ShipName.js"
+import { ShipyardUnit } from "../Types/Shipyard/ShipyardUnit.js"
 
 export function getShipyardUnitConstructionTime(
     unit: ShipyardUnit,

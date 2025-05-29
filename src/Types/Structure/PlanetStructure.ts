@@ -1,4 +1,4 @@
-import { StructureName } from "./StructureName"
+import { StructureName } from "./StructureName.js"
 
 export interface PlanetStructure {
     level: number
