@@ -52,7 +52,7 @@ const samplePlanet /*: Planet */ = {
 }
 ```
 
-## computeResourcesForPlanetAtDate
+## Resources at Date
 
 ```typescript
 const futureDate = new Date("2025-05-29T11:00:00.000Z") // 1 hour later
@@ -60,65 +60,56 @@ computeResourcesForPlanetAtDate(samplePlanet, futureDate)
 /* { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 } */
 ```
 
-## computeProductionForPlanet
+## Resources Production
 
 ```typescript
 computeProductionForPlanet(samplePlanet)
 /* { metalProduction_s: 0.5302, crystalProduction_s: 0.2133, deuteriumProduction_s: 0.1036 } */
 ```
 
-## computeHasEnoughResources
-
-```typescript
-const available = { metalAmount: 1000, crystalAmount: 500, deuteriumAmount: 100 }
-const cost = { metalAmount: 800, crystalAmount: 400, deuteriumAmount: 50 }
-computeHasEnoughResources(available, cost)
-/* true */
-```
-
-## computeStructureUpgradeCostForPlanet
+## Upgrade Cost for Structure on Planet
 
 ```typescript
 computeStructureUpgradeCostForPlanet(samplePlanet, "metalMine")
 /* { metalAmount: 26273, crystalAmount: 6568, deuteriumAmount: 0 } */
 ```
 
-## computeStructureUpgradeTimeForPlanet
+## Upgrade Time for Structure on Planet
 
 ```typescript
 computeStructureUpgradeTimeForPlanet(samplePlanet, "metalMine")
 /* 1970 */
 ```
 
-## getStructureUpgradeCost
+## Upgrade Cost for Structure at Level
 
 ```typescript
 getStructureUpgradeCost("crystalMine", 9)
 /* { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 } */
 ```
 
-## getStructureConstructionTime
+## Upgrade Time for Structure at Level
 
 ```typescript
 getStructureConstructionTime("researchLab", 5, 3, 0)
 /* 2304 */
 ```
 
-## getShipCost
+## Ship Cost
 
 ```typescript
 getShipCost("lightFighter")
 /* { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 } */
 ```
 
-## getDefenseCost
+## Defense Cost
 
 ```typescript
 getDefenseCost("rocketLauncher")
 /* { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 } */
 ```
 
-## getShipyardUnitConstructionTime
+## Shipyard Unit Construction Time
 
 ```typescript
 getShipyardUnitConstructionTime(
@@ -129,7 +120,7 @@ getShipyardUnitConstructionTime(
 /* 480 */
 ```
 
-## formatResourceAmount
+## Format Resource Number
 
 ```typescript
 formatResourceAmount(1234567)
