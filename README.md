@@ -52,9 +52,7 @@ const samplePlanet /*: Planet */ = {
 }
 ```
 
-### Resource Calculation
-
-#### `computeResourcesForPlanetAtDate`
+## computeResourcesForPlanetAtDate
 
 ```typescript
 // Uses the global samplePlanet defined above.
@@ -71,7 +69,7 @@ Output:
 { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 }
 ```
 
-#### `computeProductionForPlanet`
+## computeProductionForPlanet
 
 ```typescript
 // Uses the global samplePlanet defined above.
@@ -91,7 +89,7 @@ Output:
 { metalProduction_s: 0.5302, crystalProduction_s: 0.2133, deuteriumProduction_s: 0.1036 }
 ```
 
-#### `computeHasEnoughResources`
+## computeHasEnoughResources
 
 ```typescript
 // Assumes computeHasEnoughResources and ResourcesRecord type are available.
@@ -108,9 +106,7 @@ Output:
 true
 ```
 
-### Structure Upgrades
-
-#### `computeStructureUpgradeCostForPlanet`
+## computeStructureUpgradeCostForPlanet
 
 ```typescript
 // Uses the global samplePlanet defined above.
@@ -126,7 +122,7 @@ Output:
 { metalAmount: 26273, crystalAmount: 6568, deuteriumAmount: 0 }
 ```
 
-#### `computeStructureUpgradeTimeForPlanet`
+## computeStructureUpgradeTimeForPlanet
 
 ```typescript
 // Uses the global samplePlanet defined above.
@@ -142,7 +138,7 @@ Output:
 1970
 ```
 
-#### `getStructureUpgradeCost`
+## getStructureUpgradeCost
 
 ```typescript
 // Assumes getStructureUpgradeCost, StructureName, ResourceCost types are available.
@@ -158,7 +154,7 @@ Output:
 { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 }
 ```
 
-#### `getStructureConstructionTime`
+## getStructureConstructionTime
 
 ```typescript
 // Assumes getStructureConstructionTime, getStructureUpgradeCost, StructureName types are available.
@@ -173,9 +169,7 @@ Output:
 2304
 ```
 
-### Shipyard and Defense Costs & Construction Time
-
-#### `getShipCost`
+## getShipCost
 
 ```typescript
 // Assumes getShipCost, ShipName, ResourceCost types are available.
@@ -190,7 +184,7 @@ Output:
 { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 }
 ```
 
-#### `getDefenseCost`
+## getDefenseCost
 
 ```typescript
 // Assumes getDefenseCost, DefenseName, ResourceCost types are available.
@@ -205,7 +199,7 @@ Output:
 { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 }
 ```
 
-#### `getShipyardUnitConstructionTime`
+## getShipyardUnitConstructionTime
 
 ```typescript
 // Assumes getShipyardUnitConstructionTime, ShipyardUnit, getShipCost types are available.
@@ -225,9 +219,7 @@ Output:
 480
 ```
 
-### Formatting
-
-#### `formatResourceAmount`
+## formatResourceAmount
 
 ```typescript
 // Assumes formatResourceAmount is available.
