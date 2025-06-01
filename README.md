@@ -10,7 +10,7 @@ getStructureUpgradeCost("crystalMine", 9)
 
 getStructureConstructionTime(
     "researchLab",
-    5, // target
+    5, // level
     3, // roboticsFactory
     0 //  naniteFactory
 )
@@ -34,31 +34,45 @@ getShipyardUnitConstructionTime(
 /* 480 seconds*/
 ```
 
+# production
+
+```typescript
+getMetalMineProduction_s(25)
+/* 2.25694444 metal per second */
+
+getCrystalMineProduction_s(25)
+/* 1.50472222 crystal per second */
+
+getDeuteriumProduction_s(25)
+/* 1.08333333 deuterium per second */
+/* fixed temperature: 0°C */
+```
+
 # derive data from planet
 
 ### Resources at date
 
 ```typescript
-// const futureDate = new Date("2025-05-29T11:00:00.000Z")
-computeResourcesForPlanetAtDate(samplePlanet, futureDate)
-/* { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 } */
+computeResourcesForPlanetAtDate(planet, date)
+/* { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 } 
+/* expects a Date */
 ```
 
 ### production
 
 ```typescript
-computeProductionForPlanet(samplePlanet)
+computeProductionForPlanet(planet)
 /* { metalProduction_s: 0.5302, crystalProduction_s: 0.2133, deuteriumProduction_s: 0.1036 } */
 ```
 
 ### costs and durations
 
 ```typescript
-computeStructureUpgradeCostForPlanet(samplePlanet, "metalMine")
+computeStructureUpgradeCostForPlanet(planet, "metalMine")
 /* { metalAmount: 26273, crystalAmount: 6568, deuteriumAmount: 0 } */
 
-computeStructureUpgradeTimeForPlanet(samplePlanet, "metalMine")
-/* 1970 */
+computeStructureUpgradeTimeForPlanet(planet, "metalMine")
+/* 1970 seconds */
 ```
 
 # planet shape
