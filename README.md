@@ -1,13 +1,29 @@
 Various **functions** and **types** related to the original Ogame browser game.
 
-# costs and durations
+# costs
 
-### Structure
+### mines and facilities
 
 ```typescript
 getStructureUpgradeCost("crystalMine", 9)
 /* { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 } */
+```
 
+### ships and defenses
+
+```typescript
+getShipCost("lightFighter")
+/* { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 } */
+
+getDefenseCost("rocketLauncher")
+/* { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 } */
+```
+
+# construction time
+
+### mines and facilities
+
+```ts
 getStructureConstructionTime({
     structureName: "researchLab",
     level: 5,
@@ -17,15 +33,24 @@ getStructureConstructionTime({
 /* 2304 seconds*/
 ```
 
-### Shipyard
+### ships and defenses
 
-```typescript
-getShipCost("lightFighter")
-/* { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 } */
+```ts
+getShipConstructionTime({
+    shipName: "lightFighter",
+    shipyard: 5,
+    naniteFactory: 1,
+})
+/* 480 seconds*/
 
-getDefenseCost("rocketLauncher")
-/* { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 } */
+getDefenseConstructionTime({
+    defenseName: "rocketLauncher",
+    shipyard: 5,
+    naniteFactory: 1,
+})
+/* 240 seconds*/
 
+// DEPRECATED: Use getShipConstructionTime or getDefenseConstructionTime instead
 getShipyardUnitConstructionTime(
     { name: "lightFighter", type: "ship" },
     5, // shipyardLevel
@@ -50,7 +75,7 @@ getDeuteriumProduction_s(25)
 
 # derive data from planet
 
-### Resources at date
+### resources at date
 
 ```typescript
 computeResourcesForPlanetAtDate(planet, date)
