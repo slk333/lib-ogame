@@ -1,4 +1,4 @@
-import { getStructureConstructionTime } from "../ConstructionTime/constuctionTime.js"
+import { getStructureConstructionTime } from "../ConstructionTime/getStructureConstructionTime.js"
 import { Planet } from "../Types/Planet.js"
 import { StructureName } from "../Types/Structure/StructureName.js"
 
@@ -7,14 +7,14 @@ export function computeStructureUpgradeTimeForPlanet(
     structureName: StructureName
 ): number {
     const targetLevel = planet.structures[structureName].level + 1
-    const roboticsFactoryLevel = planet.structures["roboticsFactory"].level
-    const naniteFactoryLevel = planet.structures["naniteFactory"].level
+    const roboticsFactory = planet.structures["roboticsFactory"].level
+    const naniteFactory = planet.structures["naniteFactory"].level
 
-    const upgradeTime_s = getStructureConstructionTime(
+    const upgradeTime_s = getStructureConstructionTime({
         structureName,
-        targetLevel,
-        roboticsFactoryLevel,
-        naniteFactoryLevel
-    )
+        level: targetLevel,
+        roboticsFactory,
+        naniteFactory,
+    })
     return upgradeTime_s
 }

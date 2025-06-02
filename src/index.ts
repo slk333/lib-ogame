@@ -16,7 +16,7 @@ export {
 } from "./Production/production.js"
 
 // Construction Time
-export { getStructureConstructionTime } from "./ConstructionTime/constuctionTime.js"
+export { getStructureConstructionTime } from "./ConstructionTime/getStructureConstructionTime.js"
 export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
 
 // Cost

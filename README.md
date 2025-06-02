@@ -8,12 +8,12 @@ Various **functions** and **types** related to the original Ogame browser game.
 getStructureUpgradeCost("crystalMine", 9)
 /* { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 } */
 
-getStructureConstructionTime(
-    "researchLab",
-    5, // level
-    3, // roboticsFactory
-    0 //  naniteFactory
-)
+getStructureConstructionTime({
+    structureName: "researchLab",
+    level: 5,
+    roboticsFactory: 3,
+    naniteFactory: 0,
+})
 /* 2304 seconds*/
 ```
 
