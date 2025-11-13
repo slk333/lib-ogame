@@ -8,7 +8,7 @@
     },
     "homepage": "https://github.com/slk333/lib-ogame.git",
     "license": "MIT",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "type": "module",
     "types": "./dist/index.d.ts",
     "exports": "./dist/index.js",
