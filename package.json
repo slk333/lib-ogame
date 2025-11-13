@@ -11,13 +11,7 @@
     "version": "1.4.0",
     "type": "module",
     "types": "./dist/index.d.ts",
-    "exports": {
-        ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        }
-    },
+    "exports": "./dist/index.js",
     "scripts": {
         "lint": "eslint",
         "test": "echo \"Error: no test specified\" && exit 1",
