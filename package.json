@@ -3,7 +3,7 @@
     "description": "ogame library to compute production, cost, and construction time",
     "author": "slk333 aka Antoine Weber",
     "repository": {
-        "url": "https://github.com/slk333/lib-ogame.git",
+        "url": "git+https://github.com/slk333/lib-ogame.git",
         "type": "git"
     },
     "homepage": "https://github.com/slk333/lib-ogame.git",
