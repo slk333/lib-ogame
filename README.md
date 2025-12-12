@@ -31,26 +31,28 @@ getStructureConstructionTime({
     roboticsFactory: 3,
     naniteFactory: 0,
 })
-/* 2304 seconds*/
+/* 2304 seconds */
 
 getShipConstructionTime({
     shipName: "lightFighter",
     shipyard: 5,
     naniteFactory: 1,
 })
-/* 480 seconds*/
+/* 480 seconds */
 
 getDefenseConstructionTime({
     defenseName: "rocketLauncher",
     shipyard: 5,
     naniteFactory: 1,
 })
-/* 240 seconds*/
+/* 240 seconds */
 ```
 
 ## production
 
-Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second:
+Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second.
+
+At this time, the library assumes the planet's temperature is 0°C
 
 ```typescript
 getMetalMineProduction(25)
@@ -61,12 +63,22 @@ getCrystalMineProduction(25)
 
 getDeuteriumProduction(25)
 /* 1.08333333 deuterium per second */
-/* fixed temperature: 0°C */
+```
+
+## Misc
+
+### format resources
+
+```typescript
+formatResourceAmount(1234567)
+/* "1.2M" */
 ```
 
 # derive data from a planet
 
 ### resources at date
+
+Currently, the date should be provided as a `Date` object:
 
 ```typescript
 computeResourcesAtDateForPlanet(planet, date)
@@ -76,7 +88,7 @@ computeResourcesAtDateForPlanet(planet, date)
 
 ### production
 
-computer the resources production, per second.
+computer the resource production, per second.
 
 ```typescript
 computeProductionForPlanet(planet)
@@ -84,6 +96,8 @@ computeProductionForPlanet(planet)
 ```
 
 ### costs and durations helpers
+
+the helpers detect the given structure current level:
 
 ```typescript
 computeStructureCostForPlanet(planet, "metalMine")
@@ -107,31 +121,33 @@ export interface Planet {
     structures: Record<StructureName, PlanetStructure>
     ships: Record<ShipName, { name: ShipName; count: number }>
     lastSnapshot: {
-        date: string
+        date: string // ISO
         resources: ResourcesRecord
     }
     pendingStructure: {
         name: StructureName
-        completionDate: string
+        completionDate: string // ISO
     } | null
     pendingShipyardUnit: {
         shipyardUnit: ShipyardUnit
-        completionDate: string
+        completionDate: string // ISO
     } | null
     structureQueue: StructureName[]
     shipyardQueue: ScheduledShipyardOrder[]
 }
 ```
 
+example data
+
 ```typescript
 const samplePlanet: Planet = {
-    id: "planetAlpha",
-    name: "Alpha Centauri Bb",
+    id: "a94bfc77",
+    name: "Homeworld",
     owner: {
-        id: "player123",
-        name: "GalacticOverlord",
+        id: "bb9f2151",
+        name: "Geologist Alpha",
     },
-    coordinates: { galaxy: 1, system: 100, position: 7, type: "planet" },
+    coordinates: { galaxy: 1, system: 100, position: 8, type: "planet" },
     structures: {
         metalMine: { name: "metalMine", level: 15 },
         crystalMine: { name: "crystalMine", level: 12 },
@@ -156,13 +172,4 @@ const samplePlanet: Planet = {
     structureQueue: [],
     shipyardQueue: [],
 }
-```
-
-# misc
-
-### Format resources
-
-```typescript
-formatResourceAmount(1234567)
-/* "1.2M" */
 ```
