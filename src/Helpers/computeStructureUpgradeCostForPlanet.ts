@@ -1,4 +1,4 @@
-import { getStructureUpgradeCost } from "../Cost/structureCost.js"
+import { getStructureCost } from "../Cost/getStructureCost.js"
 import { Planet } from "../Types/Planet.js"
 import { ResourcesRecord } from "../Types/ResourcesRecord.js"
 import { StructureName } from "../Types/Structure/StructureName.js"
@@ -8,6 +8,6 @@ export function computeStructureUpgradeCostForPlanet(
     structureName: StructureName
 ): ResourcesRecord {
     const targetLevel = Planet.structures[structureName].level + 1
-    const upgradeCost = getStructureUpgradeCost(structureName, targetLevel)
+    const upgradeCost = getStructureCost(structureName, targetLevel)
     return upgradeCost
 }

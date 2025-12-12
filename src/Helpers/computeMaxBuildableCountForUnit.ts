@@ -9,18 +9,18 @@ export function computeMaxBuildableCountForUnit(
 
     /* if the cost is 0 for that kind of resource, go with 9999 */
     const maxUnitsFromMetal =
-        unitCost.metalAmount > 0
-            ? Math.floor(availableResources.metalAmount / unitCost.metalAmount)
+        unitCost.metal > 0
+            ? Math.floor(availableResources.metal / unitCost.metal)
             : SHIPYARD_QUEUE_LIMIT
 
     const maxUnitsFromCrystal =
-        unitCost.crystalAmount > 0
-            ? Math.floor(availableResources.crystalAmount / unitCost.crystalAmount)
+        unitCost.crystal > 0
+            ? Math.floor(availableResources.crystal / unitCost.crystal)
             : SHIPYARD_QUEUE_LIMIT
 
     const maxUnitsFromDeuterium =
-        unitCost.deuteriumAmount > 0
-            ? Math.floor(availableResources.deuteriumAmount / unitCost.deuteriumAmount)
+        unitCost.deuterium > 0
+            ? Math.floor(availableResources.deuterium / unitCost.deuterium)
             : SHIPYARD_QUEUE_LIMIT
 
     return Math.min(

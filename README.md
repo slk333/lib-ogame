@@ -20,6 +20,13 @@ getDefenseCost("rocketLauncher")
 /* { metal: 2000, crystal: 0, deuterium: 0 } */
 ```
 
+Get the compounded cost from scratch:
+
+```ts
+getStructureCompoundedCost("crystalMine", 9)
+/* { metal: 5413, crystal: 2705, deuterium: 0 } */
+```
+
 ## construction time
 
 Get the construction time of structures, ships and defense, in seconds:

@@ -20,7 +20,8 @@ export { getStructureConstructionTime } from "./ConstructionTime/getStructureCon
 export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
 
 // Cost
-export { getStructureUpgradeCost, getStructureCompoundedCost } from "./Cost/structureCost.js"
+export { getStructureCompoundedCost } from "./Cost/getStructureCompoundedCost.js"
+export { getStructureCost } from "./Cost/getStructureCost.js"
 export { getShipCost } from "./Cost/getShipCost.js"
 export { getDefenseCost } from "./Cost/getDefenseCost.js"
 export { getShipyardUnitCost } from "./Cost/getShipyardUnitCost.js"

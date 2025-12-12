@@ -11,33 +11,33 @@ export function getDefenseCost(defenseName: DefenseName): ResourceCost {
 
 const DEFENSE_COSTS: Record<DefenseName, ResourceCost> = {
     rocketLauncher: {
-        metalAmount: 2000,
-        crystalAmount: 0,
-        deuteriumAmount: 0,
+        metal: 2000,
+        crystal: 0,
+        deuterium: 0,
     },
     lightLaser: {
-        metalAmount: 1500,
-        crystalAmount: 500,
-        deuteriumAmount: 0,
+        metal: 1500,
+        crystal: 500,
+        deuterium: 0,
     },
     heavyLaser: {
-        metalAmount: 6000,
-        crystalAmount: 2000,
-        deuteriumAmount: 0,
+        metal: 6000,
+        crystal: 2000,
+        deuterium: 0,
     },
     gaussCannon: {
-        metalAmount: 20000,
-        crystalAmount: 15000,
-        deuteriumAmount: 2000,
+        metal: 20000,
+        crystal: 15000,
+        deuterium: 2000,
     },
     ionCannon: {
-        metalAmount: 5000,
-        crystalAmount: 3000,
-        deuteriumAmount: 0,
+        metal: 5000,
+        crystal: 3000,
+        deuterium: 0,
     },
     plasmaTurret: {
-        metalAmount: 50000,
-        crystalAmount: 50000,
-        deuteriumAmount: 30000,
+        metal: 50000,
+        crystal: 50000,
+        deuterium: 30000,
     },
 }

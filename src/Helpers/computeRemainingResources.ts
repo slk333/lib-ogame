@@ -10,8 +10,8 @@ export function computeRemainingResources(
     }
 
     return {
-        metalAmount: availableResources.metalAmount - price.metalAmount,
-        crystalAmount: availableResources.crystalAmount - price.crystalAmount,
-        deuteriumAmount: availableResources.deuteriumAmount - price.deuteriumAmount,
+        metal: availableResources.metal - price.metal,
+        crystal: availableResources.crystal - price.crystal,
+        deuterium: availableResources.deuterium - price.deuterium,
     }
 }

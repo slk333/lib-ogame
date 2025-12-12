@@ -1,4 +1,4 @@
-import { getStructureUpgradeCost } from "../Cost/structureCost.js"
+import { getStructureCost } from "../index.js"
 import { StructureName } from "../Types/Structure/StructureName.js"
 
 type GetStructureConstructionTimeOptions = {
@@ -24,8 +24,8 @@ export function getStructureConstructionTime({
     naniteFactory,
 }: GetStructureConstructionTimeOptions) {
     /* sum of metal and crystal cost determine the construction time  */
-    const { metalAmount, crystalAmount } = getStructureUpgradeCost(structureName, level)
-    const resourceAmount = metalAmount + crystalAmount /* ex 60 + 15 */
+    const { metal, crystal } = getStructureCost(structureName, level)
+    const resourceAmount = metal + crystal /* ex 60 + 15 */
 
     // regular time is divided by 3.5 for target lvl 1
     // regular time is divided by 1 for target lvl 6

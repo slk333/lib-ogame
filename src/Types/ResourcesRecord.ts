@@ -1,5 +1,5 @@
 export type ResourcesRecord = {
-    metalAmount: number
-    crystalAmount: number
-    deuteriumAmount: number
+    metal: number
+    crystal: number
+    deuterium: number
 }

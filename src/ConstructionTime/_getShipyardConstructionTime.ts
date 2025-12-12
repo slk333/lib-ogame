@@ -13,7 +13,7 @@ export function getShipyardConstructionTime({
 }: GetShipyardConstructionTime): number {
     // Base time in seconds.
     // 2500 resources for 1 hour
-    const totalResources = unitCost.metalAmount + unitCost.crystalAmount
+    const totalResources = unitCost.metal + unitCost.crystal
     const baseTime = (totalResources / 2500) * 3600
 
     const shipyardSpeed = (1 + shipyard) * Math.pow(2, naniteFactory)

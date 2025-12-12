@@ -5,8 +5,8 @@ export function computeHasEnoughResources(
     price: ResourcesRecord
 ): boolean {
     return (
-        availableResources.metalAmount >= price.metalAmount &&
-        availableResources.crystalAmount >= price.crystalAmount &&
-        availableResources.deuteriumAmount >= price.deuteriumAmount
+        availableResources.metal >= price.metal &&
+        availableResources.crystal >= price.crystal &&
+        availableResources.deuterium >= price.deuterium
     )
 }

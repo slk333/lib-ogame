@@ -6,17 +6,17 @@ Various **functions** and **types** related to the original Ogame browser game.
 
 ```typescript
 getStructureUpgradeCost("crystalMine", 9)
-/* { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 } */
+/* { metalAmount: 2061, crystalAmount: 1030, deuterium: 0 } */
 ```
 
 ### ships and defenses
 
 ```typescript
 getShipCost("lightFighter")
-/* { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 } */
+/* { metalAmount: 3000, crystalAmount: 1000, deuterium: 0 } */
 
 getDefenseCost("rocketLauncher")
-/* { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 } */
+/* { metalAmount: 2000, crystalAmount: 0, deuterium: 0 } */
 ```
 
 # construction time
@@ -79,7 +79,7 @@ getDeuteriumProduction_s(25)
 
 ```typescript
 computeResourcesForPlanetAtDate(planet, date)
-/* { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 } 
+/* { metalAmount: 51908, crystalAmount: 25767, deuterium: 10372 } 
 /* expects a Date */
 ```
 
@@ -94,7 +94,7 @@ computeProductionForPlanet(planet)
 
 ```typescript
 computeStructureUpgradeCostForPlanet(planet, "metalMine")
-/* { metalAmount: 26273, crystalAmount: 6568, deuteriumAmount: 0 } */
+/* { metalAmount: 26273, crystalAmount: 6568, deuterium: 0 } */
 
 computeStructureUpgradeTimeForPlanet(planet, "metalMine")
 /* 1970 seconds */
@@ -152,7 +152,7 @@ const samplePlanet: Planet = {
         cruiser: { name: "cruiser", count: 0 },
         /* ... */
     },
-    resources: { metalAmount: 50000, crystalAmount: 25000, deuteriumAmount: 10000 },
+    resources: { metalAmount: 50000, crystalAmount: 25000, deuterium: 10000 },
     snapshotDate: new Date("2025-05-29T10:00:00.000Z").toISOString(),
     pendingStructure: null,
     pendingShipyardUnit: null,

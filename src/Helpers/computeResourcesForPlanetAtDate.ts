@@ -14,18 +14,18 @@ export function computeResourcesForPlanetAtDate(
         computeProductionForPlanet(Planet)
 
     // produced resources at requestedDate
-    const producedMetalAmount = elapsedTime_s * metalProduction_s
-    const producedCrystalAmount = elapsedTime_s * crystalProduction_s
-    const producedDeuteriumAmount = elapsedTime_s * deuteriumProduction_s
+    const producedmetal = elapsedTime_s * metalProduction_s
+    const producedcrystal = elapsedTime_s * crystalProduction_s
+    const produceddeuterium = elapsedTime_s * deuteriumProduction_s
 
     // pre-existing resources at snapshot
     const preExistingResources: ResourcesRecord = Planet.resources
 
     // sum of pre-existing + produced
     const resourcesAtRequestedDate: ResourcesRecord = {
-        metalAmount: Math.floor(preExistingResources.metalAmount + producedMetalAmount),
-        crystalAmount: Math.floor(preExistingResources.crystalAmount + producedCrystalAmount),
-        deuteriumAmount: Math.floor(preExistingResources.deuteriumAmount + producedDeuteriumAmount),
+        metal: Math.floor(preExistingResources.metal + producedmetal),
+        crystal: Math.floor(preExistingResources.crystal + producedcrystal),
+        deuterium: Math.floor(preExistingResources.deuterium + produceddeuterium),
     }
     return resourcesAtRequestedDate
 }
