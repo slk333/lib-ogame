@@ -1,31 +1,27 @@
-# lib-ogame
+Various **functions** and **types** related to the original Ogame browser game.
 
-**functions** and **types** related to the original OGame browser game.
+# costs
 
-> [!NOTE]  
-> Durations are expressed in seconds. Productions are expressed per second.
-
-> [!NOTE]  
-> This README discusses the `2.0` version.
-
-## costs
-
-Get the cost of structures, ships and defense:
+### mines and facilities
 
 ```typescript
-getStructureCost("crystalMine", 9)
-/* { metal: 2061, crystal: 1030, deuterium: 0 } */
-
-getShipCost("lightFighter")
-/* { metal: 3000, crystal: 1000, deuterium: 0 } */
-
-getDefenseCost("rocketLauncher")
-/* { metal: 2000, crystal: 0, deuterium: 0 } */
+getStructureUpgradeCost("crystalMine", 9)
+/* { metalAmount: 2061, crystalAmount: 1030, deuteriumAmount: 0 } */
 ```
 
-## construction time
+### ships and defenses
 
-Get the construction time of structures, ships and defense, in seconds:
+```typescript
+getShipCost("lightFighter")
+/* { metalAmount: 3000, crystalAmount: 1000, deuteriumAmount: 0 } */
+
+getDefenseCost("rocketLauncher")
+/* { metalAmount: 2000, crystalAmount: 0, deuteriumAmount: 0 } */
+```
+
+# construction time
+
+### mines and facilities
 
 ```ts
 getStructureConstructionTime({
@@ -35,7 +31,11 @@ getStructureConstructionTime({
     naniteFactory: 0,
 })
 /* 2304 seconds*/
+```
 
+### ships and defenses
+
+```ts
 getShipConstructionTime({
     shipName: "lightFighter",
     shipyard: 5,
@@ -49,54 +49,58 @@ getDefenseConstructionTime({
     naniteFactory: 1,
 })
 /* 240 seconds*/
+
+// DEPRECATED: Use getShipConstructionTime or getDefenseConstructionTime instead
+getShipyardUnitConstructionTime(
+    { name: "lightFighter", type: "ship" },
+    5, // shipyardLevel
+    1 // naniteLevel
+)
+/* 480 seconds*/
 ```
 
-## production
-
-Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second:
+# production
 
 ```typescript
-getMetalMineProduction(25)
+getMetalMineProduction_s(25)
 /* 2.25694444 metal per second */
 
-getCrystalMineProduction(25)
+getCrystalMineProduction_s(25)
 /* 1.50472222 crystal per second */
 
-getDeuteriumProduction(25)
+getDeuteriumProduction_s(25)
 /* 1.08333333 deuterium per second */
 /* fixed temperature: 0°C */
 ```
 
-# derive data from a planet
+# derive data from planet
 
 ### resources at date
 
 ```typescript
-computeResourcesAtDateForPlanet(planet, date)
-/* { metal: 51908, crystal: 25767, deuterium: 10372 } 
+computeResourcesForPlanetAtDate(planet, date)
+/* { metalAmount: 51908, crystalAmount: 25767, deuteriumAmount: 10372 } 
 /* expects a Date */
 ```
 
 ### production
 
-computer the resources production, per second.
-
 ```typescript
 computeProductionForPlanet(planet)
-/* { metalProduction: 0.5302, crystalProduction: 0.2133, deuteriumProduction: 0.1036 } */
+/* { metalProduction_s: 0.5302, crystalProduction_s: 0.2133, deuteriumProduction_s: 0.1036 } */
 ```
 
-### costs and durations helpers
+### costs and durations
 
 ```typescript
-computeStructureCostForPlanet(planet, "metalMine")
-/* { metal: 26273, crystal: 6568, deuterium: 0 } */
+computeStructureUpgradeCostForPlanet(planet, "metalMine")
+/* { metalAmount: 26273, crystalAmount: 6568, deuteriumAmount: 0 } */
 
-computeStructureConstructionTimeForPlanet(planet, "metalMine")
+computeStructureUpgradeTimeForPlanet(planet, "metalMine")
 /* 1970 seconds */
 ```
 
-# Planet interface
+# planet shape
 
 ```ts
 export interface Planet {
@@ -109,10 +113,8 @@ export interface Planet {
     coordinates: Coordinates
     structures: Record<StructureName, PlanetStructure>
     ships: Record<ShipName, { name: ShipName; count: number }>
-    lastSnapshot: {
-        date: string
-        resources: ResourcesRecord
-    }
+    resources: ResourcesRecord
+    snapshotDate: string
     pendingStructure: {
         name: StructureName
         completionDate: string
@@ -150,10 +152,8 @@ const samplePlanet: Planet = {
         cruiser: { name: "cruiser", count: 0 },
         /* ... */
     },
-    lastSnapshot: {
-        date: new Date("2025-05-29T10:00:00.000Z").toISOString(),
-        resources: { metal: 50000, crystal: 25000, deuterium: 10000 },
-    }
+    resources: { metalAmount: 50000, crystalAmount: 25000, deuteriumAmount: 10000 },
+    snapshotDate: new Date("2025-05-29T10:00:00.000Z").toISOString(),
     pendingStructure: null,
     pendingShipyardUnit: null,
     structureQueue: [],
