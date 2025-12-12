@@ -20,7 +20,7 @@ getDefenseCost("rocketLauncher")
 /* { metal: 2000, crystal: 0, deuterium: 0 } */
 ```
 
-Get the compounded cost from scratch:
+Get the compounded cost up to level `n`. Note: the value is slightly the real cost, since the
 
 ```ts
 getStructureCompoundedCost("crystalMine", 9)

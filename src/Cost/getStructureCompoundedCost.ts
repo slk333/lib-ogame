@@ -26,9 +26,9 @@ function computeStructureCompoundedCost(
     const deuteriumCompoundedCost = (deuteriumNextLevelCost - deuteriumBaseCost) / growthCoefficient
 
     return {
-        metal: metalCompoundedCost,
-        crystal: crystalCompoundedCost,
-        deuterium: deuteriumCompoundedCost,
+        metal: Math.floor(metalCompoundedCost),
+        crystal: Math.floor(crystalCompoundedCost),
+        deuterium: Math.floor(deuteriumCompoundedCost),
     }
 }
 

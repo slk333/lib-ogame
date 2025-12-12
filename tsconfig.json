@@ -10,7 +10,10 @@
     "declaration": true,
     "sourceMap": true,
     "outDir": "./dist",
-    "isolatedModules": true
+    "isolatedModules": true,
+    
+    
+
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
