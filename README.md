@@ -1,12 +1,9 @@
 # lib-ogame
 
-**functions** and **types** related to the original OGame browser game.
+`lib-ogame` provides **functions** and **types** related to the original OGame browser game.
 
-> [!NOTE]  
+> [!TIP]  
 > Durations are expressed in seconds. Productions are expressed per second.
-
-> [!NOTE]  
-> This README discusses the `2.0` version.
 
 ## costs
 
