@@ -16,7 +16,8 @@
         "lint": "eslint",
         "test": "tsx ./src/_Tests/test.ts",
         "build": "rimraf dist && tsc -p tsconfig.json",
-        "knip": "knip"
+        "knip": "knip",
+        "prepublishOnly": "npm run build"
     },
     "devDependencies": {
         "@types/node": "^25.0.1",
