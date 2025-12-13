@@ -1,21 +1,12 @@
-import js from "@eslint/js";
-import tseslint from "typescript-eslint";
+import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
+import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default defineConfig(
     {
-        ignores: ["dist/**"],
+        // Global ignore: applies to all other configs in this list
+        ignores: ["dist/"],
     },
-    {
-        files: ["**/*.ts", "**/*.tsx"],
-        extends: [
-            js.configs.recommended,
-            ...tseslint.configs.recommended,
-        ],
-        languageOptions: {
-            parser: tseslint.parser,
-            parserOptions: {
-                project: "tsconfig.json",
-            },
-        },
-    }
+    eslint.configs.recommended,
+    tseslint.configs.recommended,
 );

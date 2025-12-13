@@ -1,6 +1,6 @@
 {
     "name": "@slk333/lib-ogame",
-    "description": "ogame library to compute production, cost, and construction time",
+    "description": "OGame library to compute production, cost, and construction time. Provides interface for Planets and other game entities.",
     "author": "slk333 aka Antoine Weber",
     "repository": {
         "url": "git+https://github.com/slk333/lib-ogame.git",
@@ -19,15 +19,14 @@
         "knip": "knip"
     },
     "devDependencies": {
-        "@types/node": "^22.5.2",
-        "@typescript-eslint/eslint-plugin": "^8.3.0",
-        "@typescript-eslint/parser": "^8.3.0",
-        "eslint": "^9.9.1",
-        "knip": "^5.29.1",
-        "rimraf": "^6.0.1",
+        "@types/node": "^25.0.1",
+        "eslint": "^9.39.2",
+        "@eslint/js": "^9.39.2",
+        "typescript-eslint": "^8.49.0",
+        "knip": "^5.73.4",
+        "rimraf": "^6.1.2",
         "tsx": "^4.21.0",
-        "typescript": "^5.5.4",
-        "typescript-eslint": "^8.3.0"
+        "typescript": "^5.9.3"
     },
     "files": [
         "dist/",
