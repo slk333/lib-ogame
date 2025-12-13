@@ -10,25 +10,23 @@ import { getMetalMineCost, getCrystalMineCost, getDeuteriumMineCost } from "./in
 
 function computeStructureCompoundedCost(
     achievedLevel: number,
-    costFunction: (targetLevel: number) => ResourceCost,
-    growthCoefficient: number
+    costFunction: (level: number) => ResourceCost
 ) {
-    const metalNextLevelCost = costFunction(achievedLevel + 1).metal ?? 0
-    const metalBaseCost = costFunction(1).metal ?? 0
-    const metalCompoundedCost = (metalNextLevelCost - metalBaseCost) / growthCoefficient
+    let metal = 0
+    let crystal = 0
+    let deuterium = 0
 
-    const crystalNextLevelCost = costFunction(achievedLevel + 1).crystal ?? 0
-    const crystalBaseCost = costFunction(1).crystal ?? 0
-    const crystalCompoundedCost = (crystalNextLevelCost - crystalBaseCost) / growthCoefficient
-
-    const deuteriumNextLevelCost = costFunction(achievedLevel + 1).deuterium ?? 0
-    const deuteriumBaseCost = costFunction(1).deuterium ?? 0
-    const deuteriumCompoundedCost = (deuteriumNextLevelCost - deuteriumBaseCost) / growthCoefficient
+    for (let level = 1; level <= achievedLevel; level++) {
+        const levelCost = costFunction(level)
+        metal += levelCost.metal
+        crystal += levelCost.crystal
+        deuterium += levelCost.deuterium
+    }
 
     return {
-        metal: Math.floor(metalCompoundedCost),
-        crystal: Math.floor(crystalCompoundedCost),
-        deuterium: Math.floor(deuteriumCompoundedCost),
+        metal,
+        crystal,
+        deuterium,
     }
 }
 
@@ -38,26 +36,23 @@ export function getStructureCompoundedCost(
 ): ResourceCost {
     switch (name) {
         case "metalMine":
-            return computeStructureCompoundedCost(achievedLevel, getMetalMineCost, 0.5)
-
+            return computeStructureCompoundedCost(achievedLevel, getMetalMineCost)
         case "crystalMine":
-            return computeStructureCompoundedCost(achievedLevel, getCrystalMineCost, 0.6)
+            return computeStructureCompoundedCost(achievedLevel, getCrystalMineCost)
 
         case "deuteriumSynthesizer":
-            return computeStructureCompoundedCost(achievedLevel, getDeuteriumMineCost, 0.5)
-
+            return computeStructureCompoundedCost(achievedLevel, getDeuteriumMineCost)
         case "roboticsFactory":
-            return computeStructureCompoundedCost(achievedLevel, getRoboticsFactoryCost, 1)
+            return computeStructureCompoundedCost(achievedLevel, getRoboticsFactoryCost)
 
         case "shipyard":
-            return computeStructureCompoundedCost(achievedLevel, getShipyardCost, 1)
+            return computeStructureCompoundedCost(achievedLevel, getShipyardCost)
 
         case "researchLab":
-            return computeStructureCompoundedCost(achievedLevel, getResearchLabCost, 1)
+            return computeStructureCompoundedCost(achievedLevel, getResearchLabCost)
 
         case "naniteFactory":
-            return computeStructureCompoundedCost(achievedLevel, getNaniteFactoryCost, 1)
-
+            return computeStructureCompoundedCost(achievedLevel, getNaniteFactoryCost)
         default:
             throw Error("invalid name")
     }

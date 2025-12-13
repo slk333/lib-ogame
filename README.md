@@ -20,11 +20,11 @@ getDefenseCost("rocketLauncher")
 /* { metal: 2000, crystal: 0, deuterium: 0 } */
 ```
 
-Get the compounded cost up to level `n`. The value is higher than the real cost by a few units at most.
+Calculate the compounded cost of a structure from level 0 to level `n`.
 
 ```ts
 getStructureCompoundedCost("crystalMine", 9)
-/* { metal: 5416, crystal: 2708, deuterium: 0 } */
+/* { metal: 5413, crystal: 2705, deuterium: 0 } */
 ```
 
 ## construction time
