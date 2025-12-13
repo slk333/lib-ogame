@@ -6,20 +6,20 @@ export function computeResourcesForPlanetAtDate(
     Planet: Planet,
     requestedDate: Date
 ): ResourcesRecord {
-    const snapshotDate = new Date(Planet.snapshotDate) // from ISO
-    const elapsedTime_s = (requestedDate.getTime() - snapshotDate.getTime()) / 1000
+    const snapshotDate = new Date(Planet.lastSnapshot.date) // from ISO
+    const elapsedTime = (requestedDate.getTime() - snapshotDate.getTime()) / 1000
 
     // planet production per second
-    const { metalProduction_s, crystalProduction_s, deuteriumProduction_s } =
+    const { metalProduction, crystalProduction, deuteriumProduction } =
         computeProductionForPlanet(Planet)
 
     // produced resources at requestedDate
-    const producedmetal = elapsedTime_s * metalProduction_s
-    const producedcrystal = elapsedTime_s * crystalProduction_s
-    const produceddeuterium = elapsedTime_s * deuteriumProduction_s
+    const producedmetal = elapsedTime * metalProduction
+    const producedcrystal = elapsedTime * crystalProduction
+    const produceddeuterium = elapsedTime * deuteriumProduction
 
     // pre-existing resources at snapshot
-    const preExistingResources: ResourcesRecord = Planet.resources
+    const preExistingResources: ResourcesRecord = Planet.lastSnapshot.resources
 
     // sum of pre-existing + produced
     const resourcesAtRequestedDate: ResourcesRecord = {

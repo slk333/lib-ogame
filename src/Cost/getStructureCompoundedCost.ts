@@ -7,28 +7,7 @@ import {
     getNaniteFactoryCost,
 } from "./internals/facilityCost.js"
 import { getMetalMineCost, getCrystalMineCost, getDeuteriumMineCost } from "./internals/mineCost.js"
-
-function computeStructureCompoundedCost(
-    achievedLevel: number,
-    costFunction: (level: number) => ResourceCost
-) {
-    let metal = 0
-    let crystal = 0
-    let deuterium = 0
-
-    for (let level = 1; level <= achievedLevel; level++) {
-        const levelCost = costFunction(level)
-        metal += levelCost.metal
-        crystal += levelCost.crystal
-        deuterium += levelCost.deuterium
-    }
-
-    return {
-        metal,
-        crystal,
-        deuterium,
-    }
-}
+import { applyCostFunction } from "./internals/applyCostFunction.js"
 
 export function getStructureCompoundedCost(
     name: StructureName,
@@ -36,23 +15,26 @@ export function getStructureCompoundedCost(
 ): ResourceCost {
     switch (name) {
         case "metalMine":
-            return computeStructureCompoundedCost(achievedLevel, getMetalMineCost)
+            return applyCostFunction(achievedLevel, getMetalMineCost)
+
         case "crystalMine":
-            return computeStructureCompoundedCost(achievedLevel, getCrystalMineCost)
+            return applyCostFunction(achievedLevel, getCrystalMineCost)
 
         case "deuteriumSynthesizer":
-            return computeStructureCompoundedCost(achievedLevel, getDeuteriumMineCost)
+            return applyCostFunction(achievedLevel, getDeuteriumMineCost)
+
         case "roboticsFactory":
-            return computeStructureCompoundedCost(achievedLevel, getRoboticsFactoryCost)
+            return applyCostFunction(achievedLevel, getRoboticsFactoryCost)
 
         case "shipyard":
-            return computeStructureCompoundedCost(achievedLevel, getShipyardCost)
+            return applyCostFunction(achievedLevel, getShipyardCost)
 
         case "researchLab":
-            return computeStructureCompoundedCost(achievedLevel, getResearchLabCost)
+            return applyCostFunction(achievedLevel, getResearchLabCost)
 
         case "naniteFactory":
-            return computeStructureCompoundedCost(achievedLevel, getNaniteFactoryCost)
+            return applyCostFunction(achievedLevel, getNaniteFactoryCost)
+
         default:
             throw Error("invalid name")
     }

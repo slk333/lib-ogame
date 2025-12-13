@@ -160,9 +160,7 @@ const samplePlanet: Planet = {
         crystalMine: { name: "crystalMine", level: 12 },
         deuteriumSynthesizer: { name: "deuteriumSynthesizer", level: 10 },
         roboticsFactory: { name: "roboticsFactory", level: 5 },
-        shipyard: { name: "shipyard", level: 6 },
-        researchLab: { name: "researchLab", level: 7 },
-        naniteFactory: { name: "naniteFactory", level: 2 },
+        /* ... */
     },
     ships: {
         lightFighter: { name: "lightFighter", count: 50 },

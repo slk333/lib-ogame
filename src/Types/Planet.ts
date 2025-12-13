@@ -9,27 +9,25 @@ import { ResourcesRecord } from "./ResourcesRecord.js"
 export interface Planet {
     id: string
     name: string
-
     owner: {
         id: string
         name: string
     }
 
+    createdAt?: string // ISO
     coordinates: Coordinates
 
     structures: Record<StructureName, PlanetStructure>
-
     ships: Record<ShipName, { name: ShipName; count: number }>
 
-    resources: ResourcesRecord
-
-    snapshotDate: string
-
+    lastSnapshot: {
+        date: string // ISO
+        resources: ResourcesRecord
+    }
     pendingStructure: {
         name: StructureName
         completionDate: string
     } | null
-
     pendingShipyardUnit: {
         shipyardUnit: ShipyardUnit
         completionDate: string

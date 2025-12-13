@@ -10,9 +10,9 @@ export { formatResourceAmount } from "./Helpers/formatResourceAmount.js"
 
 // Production
 export {
-    getMetalMineProduction_s,
-    getCrystalMineProduction_s,
-    getDeuteriumProduction_s,
+    getMetalMineProduction,
+    getCrystalMineProduction,
+    getDeuteriumProduction,
 } from "./Production/production.js"
 
 // Construction Time

@@ -10,11 +10,11 @@ export function computeStructureUpgradeTimeForPlanet(
     const roboticsFactory = planet.structures["roboticsFactory"].level
     const naniteFactory = planet.structures["naniteFactory"].level
 
-    const upgradeTime_s = getStructureConstructionTime({
+    const upgradeTime = getStructureConstructionTime({
         structureName,
         level: targetLevel,
         roboticsFactory,
         naniteFactory,
     })
-    return upgradeTime_s
+    return upgradeTime
 }

@@ -38,6 +38,6 @@ export function getStructureConstructionTime({
     /* 1 hour for 2500 resources */
     const constructionTime_h =
         resourceAmount / 2500 / lowLevelEasing / (1 + roboticsFactory) / 2 ** naniteFactory
-    const constructionTime_s = Math.trunc(constructionTime_h * 3600)
-    return constructionTime_s
+    const constructionTime = Math.trunc(constructionTime_h * 3600)
+    return constructionTime
 }
