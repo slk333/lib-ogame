@@ -59,7 +59,7 @@ getDefenseConstructionTime({
 
 Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second.
 
-At this time, the library assumes the planet's temperature is 0°C
+For Deuterium Production, the planet's temperature is assumed to be 0°C.
 
 ```typescript
 getMetalMineProduction(25)
