@@ -20,7 +20,7 @@ getDefenseCost("rocketLauncher")
 /* { metal: 2000, crystal: 0, deuterium: 0 } */
 ```
 
-Calculate the compounded cost of a structure from level 0 to level `n`.
+Get the compounded cost of a structure from level 0 to `n`.
 
 ```ts
 getStructureCompoundedCost("crystalMine", 9)
@@ -29,7 +29,7 @@ getStructureCompoundedCost("crystalMine", 9)
 
 ## construction time
 
-Get the construction time of structures, ships and defense, in seconds:
+Get the construction time for structures, ships and defense, in seconds:
 
 ```ts
 getStructureConstructionTime({
@@ -63,13 +63,13 @@ At this time, the library assumes the planet's temperature is 0°C
 
 ```typescript
 getMetalMineProduction(25)
-/* 2.25694444 metal per second */
+/* 2.25694444 metal (per second) */
 
 getCrystalMineProduction(25)
-/* 1.50472222 crystal per second */
+/* 1.50472222 crystal (per second) */
 
-getDeuteriumProduction(25)
-/* 1.08333333 deuterium per second */
+getDeuteriumSynthesizerProduction(25)
+/* 1.08333333 deuterium (per second) */
 ```
 
 ## Misc
