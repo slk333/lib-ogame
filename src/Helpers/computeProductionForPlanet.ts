@@ -1,6 +1,6 @@
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { getCrystalMineProduction } from "../Production/getCrystalMineProduction.js"
-import { getDeuteriumProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
+import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
 import { Planet } from "../Types/Planet.js"
 
 type ResourcesProduction = {
@@ -19,7 +19,7 @@ export function computeProductionForPlanet(planet: Planet): ResourcesProduction 
     /* 0.2 mines production */
     const metalMineProduction = getMetalMineProduction(planet.structures.metalMine.level)
     const crystalMineProduction = getCrystalMineProduction(planet.structures.crystalMine.level)
-    const deuteriumMineProduction = getDeuteriumProduction(
+    const deuteriumMineProduction = getDeuteriumSynthesizerProduction(
         planet.structures.deuteriumSynthesizer.level
     )
     /* 0.3 native + mines production */
