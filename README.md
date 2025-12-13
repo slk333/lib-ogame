@@ -107,10 +107,10 @@ computeProductionForPlanet(planet)
 the helpers detect the given structure current level:
 
 ```typescript
-computeStructureCostForPlanet(planet, "metalMine")
+computeStructureUpgradeCostForPlanet(planet, "metalMine")
 /* { metal: 26273, crystal: 6568, deuterium: 0 } */
 
-computeStructureConstructionTimeForPlanet(planet, "metalMine")
+computeStructureUpgradeTimeForPlanet(planet, "metalMine")
 /* 1970 seconds */
 ```
 
