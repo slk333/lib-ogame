@@ -15,13 +15,11 @@ export function getShipyardUnitConstructionTime(
             naniteFactory: naniteLevel,
             shipyard: shipyardLevel,
         })
-    }
-
-    if (unit.type === "defense") {
+    } else if (unit.type === "defense") {
         return getDefenseConstructionTime({
             defenseName: unit.name as DefenseName,
             naniteFactory: naniteLevel,
             shipyard: shipyardLevel,
         })
-    }
+    } else throw new Error("Unknown unit type")
 }
