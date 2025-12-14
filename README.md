@@ -63,13 +63,13 @@ For Deuterium Production, the planet's temperature is assumed to be 0°C.
 
 ```typescript
 getMetalMineProduction(25)
-/* 2.25694444 metal (per second) */
+/* 2.25722222 metal (per second) */
 
 getCrystalMineProduction(25)
 /* 1.50472222 crystal (per second) */
 
 getDeuteriumSynthesizerProduction(25)
-/* 1.08333333 deuterium (per second) */
+/* 1.02305556 deuterium (per second) */
 ```
 
 ## Misc
@@ -88,7 +88,7 @@ formatResourceAmount(1234567)
 Currently, the date should be provided as a `Date` object:
 
 ```typescript
-computeResourcesAtDateForPlanet(planet, date)
+computeResourcesForPlanetAtDate(planet, date)
 /* { metal: 51908, crystal: 25767, deuterium: 10372 } 
 /* expects a Date */
 ```
