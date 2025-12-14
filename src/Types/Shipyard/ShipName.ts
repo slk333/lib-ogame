@@ -1,2 +1,2 @@
-import { shipNames } from "../../Collections/shipNames.js"
+import { shipNames } from "../../StaticCollections/shipNames.js"
 export type ShipName = (typeof shipNames)[number]

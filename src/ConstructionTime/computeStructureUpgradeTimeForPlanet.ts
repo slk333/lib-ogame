@@ -1,4 +1,4 @@
-import { getStructureConstructionTime } from "../ConstructionTime/getStructureConstructionTime.js"
+import { getStructureConstructionTime } from "./getStructureConstructionTime.js"
 import { Planet } from "../Types/Planet.js"
 import { StructureName } from "../Types/Structure/StructureName.js"
 

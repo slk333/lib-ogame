@@ -1,6 +1,6 @@
-import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
-import { getCrystalMineProduction } from "../Production/getCrystalMineProduction.js"
-import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
+import { getMetalMineProduction } from "./getMetalMineProduction.js"
+import { getCrystalMineProduction } from "./getCrystalMineProduction.js"
+import { getDeuteriumSynthesizerProduction } from "./getDeuteriumSynthesizerProduction.js"
 import { Planet } from "../Types/Planet.js"
 
 type ResourcesProduction = {

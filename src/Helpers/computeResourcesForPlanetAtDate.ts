@@ -1,6 +1,6 @@
+import { computeProductionForPlanet } from "../Production/computeProductionForPlanet.js"
 import { Planet } from "../Types/Planet.js"
 import { ResourcesRecord } from "../Types/ResourcesRecord.js"
-import { computeProductionForPlanet } from "./computeProductionForPlanet.js"
 
 export function computeResourcesForPlanetAtDate(
     Planet: Planet,

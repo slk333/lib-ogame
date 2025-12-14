@@ -4,26 +4,26 @@ export { getStructureCost } from "./Cost/getStructureCost.js"
 export { getShipCost } from "./Cost/getShipCost.js"
 export { getDefenseCost } from "./Cost/getDefenseCost.js"
 export { getShipyardUnitCost } from "./Cost/getShipyardUnitCost.js"
+export { computeStructureUpgradeCostForPlanet } from "./Cost/computeStructureUpgradeCostForPlanet.js"
 
 // Construction Time
 export { getStructureConstructionTime } from "./ConstructionTime/getStructureConstructionTime.js"
 export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
+export { computeStructureUpgradeTimeForPlanet } from "./ConstructionTime/computeStructureUpgradeTimeForPlanet.js"
 
 // Production
 export { getMetalMineProduction } from "./Production/getMetalMineProduction.js"
 export { getCrystalMineProduction } from "./Production/getCrystalMineProduction.js"
 export { getDeuteriumSynthesizerProduction } from "./Production/getDeuteriumSynthesizerProduction.js"
+export { computeProductionForPlanet } from "./Production/computeProductionForPlanet.js"
 
 // Collections
-export { shipNames } from "./Collections/shipNames.js"
-export { structureNames } from "./Collections/structureNames.js"
-export { defenseNames } from "./Collections/defenseNames.js"
+export { shipNames } from "./StaticCollections/shipNames.js"
+export { structureNames } from "./StaticCollections/structureNames.js"
+export { defenseNames } from "./StaticCollections/defenseNames.js"
 
 // Helpers
 export { computeResourcesForPlanetAtDate } from "./Helpers/computeResourcesForPlanetAtDate.js"
-export { computeProductionForPlanet } from "./Helpers/computeProductionForPlanet.js"
-export { computeStructureUpgradeCostForPlanet } from "./Helpers/computeStructureUpgradeCostForPlanet.js"
-export { computeStructureUpgradeTimeForPlanet } from "./Helpers/computeStructureUpgradeTimeForPlanet.js"
 export { computeHasEnoughResources } from "./Helpers/computeHasEnoughResources.js"
 export { computeRemainingResources } from "./Helpers/computeRemainingResources.js"
 export { computeMaxBuildableCountForUnit } from "./Helpers/computeMaxBuildableCountForUnit.js"
