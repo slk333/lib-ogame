@@ -3,11 +3,12 @@
  *
  * Canonical OGame formula (hourly, floored):
  *   floor(10 * level * 1.1^level * (1.36 - 0.004 * avgTemp))
+ *   floor(10 * level * 1.1^level * (1.44 - 0.004 * maxTemp)) // equivalent
  *
  * This library returns per-second production, so it returns:
  *   floor(hourlyProduction) / 3600
  *
- * Design choice: `avgTemp` is currently assumed to be 0°C.
+ * Design choice: `maxTemp` defaults to 0°C.
  */
 export function getDeuteriumSynthesizerProduction(
     currentLevel: number,
@@ -19,6 +20,7 @@ export function getDeuteriumSynthesizerProduction(
     const modifier = 0.004 // equals 1 / 250
 
     // Quick intuition (linear impact):
+    //  110°C  => factor 1.00 => baseline production
     //  100°C  => factor 1.04 => +4% production vs 110°C
     //  10°C => factor 1.40 => +40% production vs 110°C
     //  -130°C => factor 1.96 => +96% production vs 110°C
@@ -28,9 +30,9 @@ export function getDeuteriumSynthesizerProduction(
     // | maxTemp (°C) | temperatureFactor |
     // |------------:|------------------:|
     // | -130        | 1.960000          |
-    // | 0          | 1.440000          |
+    // | 0           | 1.440000          |
     // | 60          | 1.200000          |
-    // | 110          | 1.000000          |
+    // | 110         | 1.000000          |
     // | 360         | 0.000000          |
 
     // temperatureFactor is at 1 for 110
