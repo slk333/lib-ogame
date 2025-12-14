@@ -9,31 +9,31 @@
  *
  * Design choice: `avgTemp` is currently assumed to be 0°C.
  */
-export function getDeuteriumSynthesizerProduction(currentLevel: number): number {
-    // Temperature factor = (1.36 - 0.004 * avgTemp) is a multiplier applied to the base output.
-    // Handy mental model: at 90°C, the factor is exactly 1.00 (so it's a convenient baseline).
-    const base = 1.36
+export function getDeuteriumSynthesizerProduction(
+    currentLevel: number,
+    maxTemp: number = 0
+): number {
+    // Temperature factor = (1.44 - 0.004 * maxTemp) is a multiplier applied to the base output.
+    // Handy mental model: at 110°C, the factor is exactly 1.00 (so it's a convenient baseline).
+    const base = 1.44
     const modifier = 0.004 // equals 1 / 250
 
-    const maxTemp = 0
-
     // Quick intuition (linear impact):
-    //  80°C  => factor 1.04 => +4% production vs 90°C
-    //  -10°C => factor 1.40 => +40% production vs 90°C
-    //  -130°C => factor 1.88 => +88% production vs 90°C
+    //  100°C  => factor 1.04 => +4% production vs 110°C
+    //  10°C => factor 1.40 => +40% production vs 110°C
+    //  -130°C => factor 1.96 => +96% production vs 110°C
 
-    // temperatureFactor = 1.36 - 0.004 * avgTemp
+    // temperatureFactor = 1.44 - 0.004 * maxTemp
     //
-    // | avgTemp (°C) | temperatureFactor |
+    // | maxTemp (°C) | temperatureFactor |
     // |------------:|------------------:|
-    // | -130        | 1.880000          |
-    // | 0           | 1.360000          |
-    // | 40          | 1.200000          |
-    // | 90          | 1.000000          |
-    // | 250         | 0.360000          |
-    // | 340         | 0.000000          |
+    // | -130        | 1.960000          |
+    // | 0          | 1.440000          |
+    // | 60          | 1.200000          |
+    // | 110          | 1.000000          |
+    // | 360         | 0.000000          |
 
-    // temperatureFactor is at 1 for 90°C
+    // temperatureFactor is at 1 for 110
     const temperatureFactor = base - modifier * maxTemp
 
     // levelFactor = level * 1.1^level

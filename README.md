@@ -57,9 +57,7 @@ getDefenseConstructionTime({
 
 ## production
 
-Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second.
-
-For Deuterium Production, the planet's temperature is assumed to be 0°C.
+Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second. The Deuterium Synthesizer, takes into account the planet's max temperature. It defaults to 0°C.
 
 ```typescript
 getMetalMineProduction(25)
@@ -69,7 +67,8 @@ getCrystalMineProduction(25)
 /* 1.50472222 crystal (per second) */
 
 getDeuteriumSynthesizerProduction(25)
-/* 1.02305556 deuterium (per second) */
+getDeuteriumSynthesizerProduction(25, 0)
+/* 1.08333333 deuterium (per second) at 0°C */
 ```
 
 ## Misc
