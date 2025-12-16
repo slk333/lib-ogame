@@ -16,6 +16,7 @@ export interface Planet {
 
     createdAt?: string // ISO
     coordinates: Coordinates
+    temperature: number
 
     structures: Record<StructureName, PlanetStructure>
     ships: Record<ShipName, { name: ShipName; count: number }>
