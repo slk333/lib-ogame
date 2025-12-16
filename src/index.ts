@@ -22,12 +22,13 @@ export { shipNames } from "./StaticCollections/shipNames.js"
 export { structureNames } from "./StaticCollections/structureNames.js"
 export { defenseNames } from "./StaticCollections/defenseNames.js"
 
-// Helpers
-export { computeResourcesForPlanetAtDate } from "./Helpers/computeResourcesForPlanetAtDate.js"
-export { computeHasEnoughResources } from "./Helpers/computeHasEnoughResources.js"
-export { computeRemainingResources } from "./Helpers/computeRemainingResources.js"
-export { computeMaxBuildableCountForUnit } from "./Helpers/computeMaxBuildableCountForUnit.js"
-export { formatResourceAmount } from "./Helpers/formatResourceAmount.js"
+// Misc
+export { computeResourcesForPlanetAtDate } from "./Misc/computeResourcesForPlanetAtDate.js"
+export { computeHasEnoughResources } from "./Misc/computeHasEnoughResources.js"
+export { computeRemainingResources } from "./Misc/computeRemainingResources.js"
+export { computeMaxBuildableCountForUnit } from "./Misc/computeMaxBuildableCountForUnit.js"
+export { formatResourceAmount } from "./Misc/formatResourceAmount.js"
+export { getRandomTempForPosition } from "./Misc/getRandomTempForPosition.js"
 
 // Types
 export type { Planet } from "./Types/Planet.js"

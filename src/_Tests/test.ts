@@ -8,7 +8,8 @@ import { getStructureConstructionTime } from "../ConstructionTime/getStructureCo
 import { getCrystalMineProduction } from "../Production/getCrystalMineProduction.js"
 import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
-import { formatResourceAmount } from "../Helpers/formatResourceAmount.js"
+import { formatResourceAmount } from "../Misc/formatResourceAmount.js"
+import { getRandomTempForPosition } from "../Misc/getRandomTempForPosition.js"
 
 console.log("# costs")
 
@@ -74,7 +75,16 @@ console.log(getDeuteriumSynthesizerProduction(25, 110))
 console.log(getDeuteriumSynthesizerProduction(25, 360))
 console.log(getDeuteriumSynthesizerProduction(25, -130))
 
-console.log("\n# misc")
+console.log("\nMISC")
 
 console.log("formatResourceAmount(1234567):")
 console.log(formatResourceAmount(1234567))
+
+console.log("getRandomTempForPosition(15):")
+console.table([
+    getRandomTempForPosition(15),
+    getRandomTempForPosition(15),
+    getRandomTempForPosition(15),
+    getRandomTempForPosition(15),
+    getRandomTempForPosition(15),
+])
