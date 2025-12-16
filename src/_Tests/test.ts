@@ -9,7 +9,7 @@ import { getCrystalMineProduction } from "../Production/getCrystalMineProduction
 import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { formatResourceAmount } from "../Misc/formatResourceAmount.js"
-import { getRandomTempForPosition } from "../Misc/getRandomTempForPosition.js"
+import { getRandomTempForPosition } from "../Misc/getRandomTemperatureForPosition.js"
 
 console.log("# costs")
 

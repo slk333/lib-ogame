@@ -1,4 +1,4 @@
-export function getRandomTempForPosition(position: number): number {
+export function getRandomTemperatureForPosition(position: number): number {
     const { minTemp, maxTemp } = getMinMaxTempsForPosition(position)
     return pickRandomIntegerWithinRange(minTemp, maxTemp)
 }

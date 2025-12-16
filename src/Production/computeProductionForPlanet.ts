@@ -10,21 +10,23 @@ type ResourcesProduction = {
 }
 
 export function computeProductionForPlanet(planet: Planet): ResourcesProduction {
-    /* 0.1 native production */
-    const nativeProduction = {
+    const { metalMine, crystalMine, deuteriumSynthesizer } = planet.structures
+    /* 0.1 base production */
+    const baseProduction: ResourcesProduction = {
         metalProduction: 30 / 3600,
         crystalProduction: 15 / 3600,
         deuteriumProduction: 0,
     }
     /* 0.2 mines production */
-    const metalMineProduction = getMetalMineProduction(planet.structures.metalMine.level)
-    const crystalMineProduction = getCrystalMineProduction(planet.structures.crystalMine.level)
+    const metalMineProduction = getMetalMineProduction(metalMine.level)
+    const crystalMineProduction = getCrystalMineProduction(crystalMine.level)
     const deuteriumMineProduction = getDeuteriumSynthesizerProduction(
-        planet.structures.deuteriumSynthesizer.level
+        deuteriumSynthesizer.level,
+        planet.temperature
     )
-    /* 0.3 native + mines production */
-    const metalProduction = metalMineProduction + nativeProduction.metalProduction
-    const crystalProduction = crystalMineProduction + nativeProduction.crystalProduction
+    /* 0.3 base + mines production */
+    const metalProduction = metalMineProduction + baseProduction.metalProduction
+    const crystalProduction = crystalMineProduction + baseProduction.crystalProduction
     const deuteriumProduction = deuteriumMineProduction
 
     return { metalProduction, crystalProduction, deuteriumProduction }
