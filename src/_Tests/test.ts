@@ -9,7 +9,7 @@ import { getCrystalMineProduction } from "../Production/getCrystalMineProduction
 import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { formatResourceAmount } from "../Misc/Format/formatResourceAmount.js"
-import { getRandomTempForPosition } from "../Misc/getRandomTemperatureForPosition.js"
+import { getRandomTemperatureForPosition } from "../Misc/getRandomTemperatureForPosition.js"
 
 console.log("# costs")
 
@@ -80,11 +80,11 @@ console.log("\nMISC")
 console.log("formatResourceAmount(1234567):")
 console.log(formatResourceAmount(1234567))
 
-console.log("getRandomTempForPosition(15):")
+console.log("getRandomTemperatureForPosition(15):")
 console.table([
-    getRandomTempForPosition(15),
-    getRandomTempForPosition(15),
-    getRandomTempForPosition(15),
-    getRandomTempForPosition(15),
-    getRandomTempForPosition(15),
+    getRandomTemperatureForPosition(15),
+    getRandomTemperatureForPosition(15),
+    getRandomTemperatureForPosition(15),
+    getRandomTemperatureForPosition(15),
+    getRandomTemperatureForPosition(15),
 ])
