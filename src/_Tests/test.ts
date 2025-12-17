@@ -8,7 +8,7 @@ import { getStructureConstructionTime } from "../ConstructionTime/getStructureCo
 import { getCrystalMineProduction } from "../Production/getCrystalMineProduction.js"
 import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
-import { formatResourceAmount } from "../Misc/formatResourceAmount.js"
+import { formatResourceAmount } from "../Misc/Format/formatResourceAmount.js"
 import { getRandomTempForPosition } from "../Misc/getRandomTemperatureForPosition.js"
 
 console.log("# costs")

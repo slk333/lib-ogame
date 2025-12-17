@@ -27,8 +27,9 @@ export { computeResourcesForPlanetAtDate } from "./Misc/computeResourcesForPlane
 export { computeHasEnoughResources } from "./Misc/computeHasEnoughResources.js"
 export { computeRemainingResources } from "./Misc/computeRemainingResources.js"
 export { computeMaxBuildableCountForUnit } from "./Misc/computeMaxBuildableCountForUnit.js"
-export { formatResourceAmount } from "./Misc/formatResourceAmount.js"
 export { getRandomTemperatureForPosition } from "./Misc/getRandomTemperatureForPosition.js"
+export { formatResourceAmount } from "./Misc/Format/formatResourceAmount.js"
+export { formatTimeInterval } from "./Misc/Format/formatTimeInterval.js"
 
 // Types
 export type { Planet } from "./Types/Planet.js"
