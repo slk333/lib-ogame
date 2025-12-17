@@ -1,2 +1,2 @@
-import { defenseNames } from "../../StaticCollections/defenseNames.js"
+import { defenseNames } from "../../StaticData/defenseNames.js"
 export type DefenseName = (typeof defenseNames)[number]

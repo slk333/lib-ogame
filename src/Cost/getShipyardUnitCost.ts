@@ -1,5 +1,5 @@
-import { defenseNames } from "../StaticCollections/defenseNames.js"
-import { shipNames } from "../StaticCollections/shipNames.js"
+import { defenseNames } from "../StaticData/defenseNames.js"
+import { shipNames } from "../StaticData/shipNames.js"
 import { ResourceCost } from "../Types/ResourceCost.js"
 import { DefenseName } from "../Types/Shipyard/DefenseName.js"
 import { ShipName } from "../Types/Shipyard/ShipName.js"

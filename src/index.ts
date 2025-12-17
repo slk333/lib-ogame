@@ -18,9 +18,13 @@ export { getDeuteriumSynthesizerProduction } from "./Production/getDeuteriumSynt
 export { computeProductionForPlanet } from "./Production/computeProductionForPlanet.js"
 
 // Collections
-export { shipNames } from "./StaticCollections/shipNames.js"
-export { structureNames } from "./StaticCollections/structureNames.js"
-export { defenseNames } from "./StaticCollections/defenseNames.js"
+export { shipNames } from "./StaticData/shipNames.js"
+export { structureNames } from "./StaticData/structureNames.js"
+export { defenseNames } from "./StaticData/defenseNames.js"
+// Display Names
+export { getStructureDisplayName } from "./StaticData/_DisplayNames/getStructureDisplayName.js"
+export { getShipDisplayName } from "./StaticData/_DisplayNames/getShipDisplayName.js"
+export { getDefenseDisplayName } from "./StaticData/_DisplayNames/getDefenseDisplayName.js"
 
 // Misc
 export { computeResourcesForPlanetAtDate } from "./Misc/computeResourcesForPlanetAtDate.js"
