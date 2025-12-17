@@ -25,7 +25,6 @@ export { defenseNames } from "./StaticData/defenseNames.js"
 export { getStructureDisplayName } from "./StaticData/_DisplayNames/getStructureDisplayName.js"
 export { getShipDisplayName } from "./StaticData/_DisplayNames/getShipDisplayName.js"
 export { getDefenseDisplayName } from "./StaticData/_DisplayNames/getDefenseDisplayName.js"
-
 // Misc
 export { computeResourcesForPlanetAtDate } from "./Misc/computeResourcesForPlanetAtDate.js"
 export { computeHasEnoughResources } from "./Misc/computeHasEnoughResources.js"

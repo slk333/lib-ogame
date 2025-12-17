@@ -1,14 +1,4 @@
-/* export const defenseNames = [
-    "rocketLauncher",
-    "lightLaser",
-    "heavyLaser",
-    "gaussCannon",
-    "ionCannon",
-    "plasmaTurret",
-] as const
- */
-
-export function getDefenseLabel(defenseName: string): string {
+export function getDefenseDisplayName(defenseName: string): string {
     switch (defenseName) {
         case "rocketLauncher":
             return "Rocket Launcher"
