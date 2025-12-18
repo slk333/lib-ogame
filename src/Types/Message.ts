@@ -1,7 +1,7 @@
 import type { Planet, ResourcesRecord } from "../index.js"
 import type { PublicPlayer } from "./PublicPlayer.js"
 
-export interface BaseMessage {
+interface BaseMessage {
     readonly id: string
     readonly emittedAt: string
 

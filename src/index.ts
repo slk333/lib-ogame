@@ -42,10 +42,16 @@ export type { RankingDictionary, PlayerScore, PlanetScore } from "./Types/Rankin
 export type { ResourceCost } from "./Types/ResourceCost.js"
 export type { StructureName } from "./Types/Structure/StructureName.js"
 export type { Coordinates } from "./Types/Coordinates.js"
-export type { Message } from "./Types/Message.js"
 export type { ResourcesRecord } from "./Types/ResourcesRecord.js"
 export type { PublicPlanet } from "./Types/PublicPlanet.js"
 export type { PublicPlayer } from "./Types/PublicPlayer.js"
+
+// Types/Messages
+export type { Message } from "./Types/Message.js"
+export type { SpyReportMessage } from "./Types/Message.js"
+export type { PlayerMessage } from "./Types/Message.js"
+export type { SystemMessage } from "./Types/Message.js"
+export type { SpyReportPlanetData } from "./Types/Message.js"
 
 // Types/FleetMission
 export type { TentativeFleetMission } from "./Types/FleetMission/TentativeFleetMission.js"
