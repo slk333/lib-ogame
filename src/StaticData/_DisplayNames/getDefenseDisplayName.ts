@@ -1,18 +1,14 @@
-export function getDefenseDisplayName(defenseName: string): string {
-    switch (defenseName) {
-        case "rocketLauncher":
-            return "Rocket Launcher"
-        case "lightLaser":
-            return "Light Laser"
-        case "heavyLaser":
-            return "Heavy Laser"
-        case "gaussCannon":
-            return "Gauss Cannon"
-        case "ionCannon":
-            return "Ion Cannon"
-        case "plasmaTurret":
-            return "Plasma Turret"
-        default:
-            return defenseName
-    }
+import { DefenseName } from "../../Types/Shipyard/DefenseName.js"
+
+const DEFENSE_DISPLAY_NAMES: Record<DefenseName, string> = {
+    rocketLauncher: "Rocket Launcher",
+    lightLaser: "Light Laser",
+    heavyLaser: "Heavy Laser",
+    gaussCannon: "Gauss Cannon",
+    ionCannon: "Ion Cannon",
+    plasmaTurret: "Plasma Turret",
+}
+
+export function getDefenseDisplayName(defenseName: DefenseName): string {
+    return DEFENSE_DISPLAY_NAMES[defenseName]
 }
