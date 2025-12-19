@@ -21,18 +21,23 @@ export { computeProductionForPlanet } from "./Production/computeProductionForPla
 export { shipNames } from "./StaticData/shipNames.js"
 export { structureNames } from "./StaticData/structureNames.js"
 export { defenseNames } from "./StaticData/defenseNames.js"
+
 // Display Names
 export { getStructureDisplayName } from "./StaticData/_DisplayNames/getStructureDisplayName.js"
 export { getShipDisplayName } from "./StaticData/_DisplayNames/getShipDisplayName.js"
 export { getDefenseDisplayName } from "./StaticData/_DisplayNames/getDefenseDisplayName.js"
+
 // Misc
 export { computeResourcesForPlanetAtDate } from "./Misc/computeResourcesForPlanetAtDate.js"
 export { computeHasEnoughResources } from "./Misc/computeHasEnoughResources.js"
 export { computeRemainingResources } from "./Misc/computeRemainingResources.js"
 export { computeMaxBuildableCountForUnit } from "./Misc/computeMaxBuildableCountForUnit.js"
 export { getRandomTemperatureForPosition } from "./Misc/getRandomTemperatureForPosition.js"
+
+// Misc/Format
 export { formatResourceAmount } from "./Misc/Format/formatResourceAmount.js"
 export { formatTimeInterval } from "./Misc/Format/formatTimeInterval.js"
+export { formatCoordinates } from "./Misc/Format/formatCoordinates.js"
 
 // Types
 export type { Planet } from "./Types/Planet.js"
