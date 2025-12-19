@@ -1,5 +1,3 @@
-import { DefenseName } from "../Types/Shipyard/DefenseName.js"
-import { ShipName } from "../Types/Shipyard/ShipName.js"
 import { ShipyardUnit } from "../Types/Shipyard/ShipyardUnit.js"
 import { getDefenseConstructionTime } from "./getDefenseConstructionTime.js"
 import { getShipConstructionTime } from "./getShipConstructionTime.js"
@@ -11,13 +9,13 @@ export function getShipyardUnitConstructionTime(
 ) {
     if (unit.type === "ship") {
         return getShipConstructionTime({
-            shipName: unit.name as ShipName,
+            shipName: unit.name,
             naniteFactory: naniteLevel,
             shipyard: shipyardLevel,
         })
     } else if (unit.type === "defense") {
         return getDefenseConstructionTime({
-            defenseName: unit.name as DefenseName,
+            defenseName: unit.name,
             naniteFactory: naniteLevel,
             shipyard: shipyardLevel,
         })
