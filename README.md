@@ -7,7 +7,7 @@
 
 ## costs
 
-Get the cost of structures, ships and defense:
+Get the cost of structures, ships and defenses:
 
 ```typescript
 getStructureCost("crystalMine", 9)
@@ -29,7 +29,7 @@ getStructureCompoundedCost("crystalMine", 9)
 
 ## construction time
 
-Get the construction time for structures, ships and defense, in seconds:
+Get the construction time for structures, ships and defenses, in seconds:
 
 ```ts
 getStructureConstructionTime({
@@ -57,7 +57,7 @@ getDefenseConstructionTime({
 
 ## production
 
-Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second. The Deuterium Synthesizer takes into account the planet's max temperature. The temperature fallbacks to 0°C if omitted.
+Get the production of each mine, given their level, per second:
 
 ```typescript
 getMetalMineProduction(25)
@@ -72,6 +72,8 @@ getDeuteriumSynthesizerProduction(25, 0)
 getDeuteriumSynthesizerProduction(25, -130)
 /* 1.47472222 deuterium (per second) at -130°C */
 ```
+
+The _Deuterium Synthesizer_ takes into account the planet's _max temperature_. The temperature fallbacks to 0°C if omitted.
 
 ## Misc
 
@@ -112,6 +114,15 @@ formatTimeInterval(3661)
 
 formatTimeInterval(90061)
 /* "1d 1h " */
+```
+
+### planet temperature
+
+Get a randomized max-temperature for a planet at position `i`. This temperature is used for calculating the deuterium production.
+
+```typescript
+getRandomTemperatureForPosition(15)
+/* -121 */
 ```
 
 # derive data from a planet
