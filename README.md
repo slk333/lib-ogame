@@ -57,7 +57,7 @@ getDefenseConstructionTime({
 
 ## production
 
-Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second. The Deuterium Synthesizer, takes into account the planet's max temperature. It defaults to 0°C.
+Get the production of the _Metal Mine_, the _Crystal Mine_, and the _Deuterium Synthesizer_, per second. The Deuterium Synthesizer takes into account the planet's max temperature. The temperature fallbacks to 0°C if omitted.
 
 ```typescript
 getMetalMineProduction(25)
@@ -66,18 +66,52 @@ getMetalMineProduction(25)
 getCrystalMineProduction(25)
 /* 1.50472222 crystal (per second) */
 
-getDeuteriumSynthesizerProduction(25)
 getDeuteriumSynthesizerProduction(25, 0)
 /* 1.08333333 deuterium (per second) at 0°C */
+
+getDeuteriumSynthesizerProduction(25, -130)
+/* 1.47472222 deuterium (per second) at -130°C */
 ```
 
 ## Misc
 
-### format resources
+### format resources: short format
+
+Format the resource into a compact representation. Used in cost panels:
 
 ```typescript
-formatResourceAmount(1234567)
+formatResourceShort(601)
+/* "601" */
+
+formatResourceShort(1201)
+/* "1.2K" */
+
+formatResourceShort(51_600)
+/* "51K" */
+
+formatResourceShort(1_200_000)
 /* "1.2M" */
+```
+
+### format time interval
+
+Format the duration into a compact representation:
+
+```typescript
+formatTimeInterval(0)
+/* "Done" */
+
+formatTimeInterval(45)
+/* "45s" */
+
+formatTimeInterval(65)
+/* "1m 5s " */
+
+formatTimeInterval(3661)
+/* "1h 1m " */
+
+formatTimeInterval(90061)
+/* "1d 1h " */
 ```
 
 # derive data from a planet

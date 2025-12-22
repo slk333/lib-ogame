@@ -35,7 +35,7 @@ export { computeMaxBuildableCountForUnit } from "./Misc/computeMaxBuildableCount
 export { getRandomTemperatureForPosition } from "./Misc/getRandomTemperatureForPosition.js"
 
 // Misc/Format
-export { formatResourceAmount } from "./Misc/Format/formatResourceAmount.js"
+export { formatResourceShort } from "./Misc/Format/formatResourceShort.js"
 export { formatTimeInterval } from "./Misc/Format/formatTimeInterval.js"
 export { formatCoordinates } from "./Misc/Format/formatCoordinates.js"
 

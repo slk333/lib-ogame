@@ -166,6 +166,6 @@ const samplePlanet: Planet = {
 ### Format resources
 
 ```typescript
-formatResourceAmount(1234567)
+formatResourceShort(1234567)
 /* "1.2M" */
 ```

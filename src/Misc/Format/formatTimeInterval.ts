@@ -32,8 +32,10 @@ export function formatTimeInterval(timeInterval: number): string {
     if (timeInterval < 60) {
         /* 11s */
         const secondsAmount = Math.floor(timeInterval)
-        return `${secondsAmount} sec`
+        return `${secondsAmount}s`
     }
 
-    return ""
+    throw new Error(
+        `Unreachable code reached in formatTimeInterval with timeInterval=${timeInterval}`
+    )
 }
