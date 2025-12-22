@@ -3,7 +3,7 @@
 `lib-ogame` provides **functions** and **types** related to the original OGame browser game.
 
 > [!TIP]  
-> Durations are expressed in seconds. Productions are expressed per second.
+> Durations are expressed in seconds. Productions are expressed per second. The universe speed is assumed to be x1.
 
 ## costs
 
@@ -57,7 +57,7 @@ getDefenseConstructionTime({
 
 ## production
 
-Get the production of each mine, given their level, per second:
+Get the production for a given mine and its level, per second:
 
 ```typescript
 getMetalMineProduction(25)
@@ -73,7 +73,7 @@ getDeuteriumSynthesizerProduction(25, -130)
 /* 1.47472222 deuterium (per second) at -130°C */
 ```
 
-The _Deuterium Synthesizer_ takes into account the planet's _max temperature_. The temperature fallbacks to 0°C if omitted.
+The _Deuterium Synthesizer_ takes into account the planet's _max temperature_. The temperature defaults to 0°C if omitted.
 
 ## Misc
 
@@ -139,7 +139,7 @@ computeResourcesForPlanetAtDate(planet, date)
 
 ### production
 
-computer the resource production, per second.
+Compute the planet's resource production, per second.
 
 ```typescript
 computeProductionForPlanet(planet)
@@ -148,7 +148,7 @@ computeProductionForPlanet(planet)
 
 ### costs and durations helpers
 
-the helpers detect the given structure current level:
+These helpers detect the structure's current level:
 
 ```typescript
 computeStructureUpgradeCostForPlanet(planet, "metalMine")
