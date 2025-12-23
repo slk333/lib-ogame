@@ -2,8 +2,22 @@
 
 `lib-ogame` provides **functions** and **types** related to the original OGame browser game.
 
+installation
+
+```bash
+npm i @slk333/lib-ogame
+```
+
+example
+
+```typescript
+import { getStructureCost } from "@slk333/lib-ogame"
+
+getStructureCost("crystalMine", 9) // { metal: 2061, crystal: 1030, deuterium: 0 }
+```
+
 > [!TIP]  
-> Durations are expressed in seconds. Productions are expressed per second.
+> The library assumes a x1 universe speed. All durations are expressed in seconds. Resource production is expressed per second.
 
 ## costs
 
@@ -75,7 +89,7 @@ getDeuteriumSynthesizerProduction(25, -130)
 
 The _Deuterium Synthesizer_ takes into account the planet's _max temperature_. The temperature defaults to 0°C if omitted.
 
-## Misc
+## misc
 
 ### format resources: short format
 
@@ -125,40 +139,7 @@ getRandomTemperatureForPosition(15)
 /* -121 */
 ```
 
-# derive data from a planet
-
-### resources at date
-
-Currently, the date should be provided as a `Date` object:
-
-```typescript
-computeResourcesForPlanetAtDate(planet, date)
-/* { metal: 51908, crystal: 25767, deuterium: 10372 } 
-/* expects a Date */
-```
-
-### production
-
-Compute the planet's resource production, per second.
-
-```typescript
-computeProductionForPlanet(planet)
-/* { metalProduction: 0.5302, crystalProduction: 0.2133, deuteriumProduction: 0.1036 } */
-```
-
-### costs and durations helpers
-
-These helpers detect the structure's current level:
-
-```typescript
-computeStructureUpgradeCostForPlanet(planet, "metalMine")
-/* { metal: 26273, crystal: 6568, deuterium: 0 } */
-
-computeStructureUpgradeTimeForPlanet(planet, "metalMine")
-/* 1970 seconds */
-```
-
-# Planet interface
+## Planet interface
 
 ```ts
 export interface Planet {
@@ -188,7 +169,7 @@ export interface Planet {
 }
 ```
 
-example data
+Example planet:
 
 ```typescript
 const samplePlanet: Planet = {
@@ -221,4 +202,37 @@ const samplePlanet: Planet = {
     structureQueue: [],
     shipyardQueue: [],
 }
+```
+
+## derive data from a planet
+
+### resources at date
+
+Currently, the date should be provided as a `Date` object:
+
+```typescript
+computeResourcesForPlanetAtDate(planet, date)
+/* { metal: 51908, crystal: 25767, deuterium: 10372 } 
+/* expects a Date */
+```
+
+### production
+
+Compute the planet's resource production, per second.
+
+```typescript
+computeProductionForPlanet(planet)
+/* { metalProduction: 0.5302, crystalProduction: 0.2133, deuteriumProduction: 0.1036 } */
+```
+
+### costs and durations helpers
+
+These helpers detect the structure's current level:
+
+```typescript
+computeStructureUpgradeCostForPlanet(planet, "metalMine")
+/* { metal: 26273, crystal: 6568, deuterium: 0 } */
+
+computeStructureUpgradeTimeForPlanet(planet, "metalMine")
+/* 1970 seconds */
 ```
