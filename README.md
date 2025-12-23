@@ -3,7 +3,7 @@
 `lib-ogame` provides **functions** and **types** related to the original OGame browser game.
 
 > [!TIP]  
-> Durations are expressed in seconds. Productions are expressed per second. The universe speed is assumed to be x1.
+> Durations are expressed in seconds. Productions are expressed per second.
 
 ## costs
 
