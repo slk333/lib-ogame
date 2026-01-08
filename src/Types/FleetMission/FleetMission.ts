@@ -1,6 +1,6 @@
 import { Coordinates } from "../Coordinates.js"
 import { ResourcesRecord } from "../ResourcesRecord.js"
-import { ShipName } from "../Shipyard/ShipName.js"
+import { FleetComposition } from "./FleetComposition.js"
 import { FleetMissionStatus } from "./FleetMissionStatus.js"
 import { FleetMissionType } from "./FleetMissionType.js"
 
@@ -9,12 +9,7 @@ export interface FleetMission {
     type: FleetMissionType
     status: FleetMissionStatus
 
-    ships: {
-        [shipName in ShipName]?: {
-            name: ShipName
-            count: number
-        }
-    }
+    ships: FleetComposition
 
     cargoHold: ResourcesRecord
 

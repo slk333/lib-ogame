@@ -1,18 +1,15 @@
 import { FleetMissionType } from "./FleetMissionType.js"
-import { ShipName } from "../Shipyard/ShipName.js"
+import { ResourcesRecord } from "../ResourcesRecord.js"
+import { FleetComposition } from "./FleetComposition.js"
 
 export interface TentativeFleetMission {
     type: FleetMissionType
-    ships: {
-        [shipName in ShipName]?: {
-            name: ShipName
-            count: number
-        }
-    }
+    ships: FleetComposition
     origin: {
         id: string
     }
     destination: {
         id: string
     }
+    cargoHold: ResourcesRecord
 }
