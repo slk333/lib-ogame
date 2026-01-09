@@ -1,8 +1,8 @@
-import { ShipName } from "../Shipyard/ShipName.js"
+import { SendableShipName } from "./SendableShipName.js"
 
-export type FleetComposition = {
-    [shipName in ShipName]?: {
-        name: ShipName
+export type SendableFleetComposition = {
+    [shipName in SendableShipName]?: {
+        name: shipName
         count: number
     }
 }

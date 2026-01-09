@@ -1,6 +1,6 @@
 import { Coordinates } from "../Coordinates.js"
 import { ResourcesRecord } from "../ResourcesRecord.js"
-import { FleetComposition } from "./FleetComposition.js"
+import { SendableFleetComposition } from "./SendableFleetComposition.js"
 import { FleetMissionStatus } from "./FleetMissionStatus.js"
 import { FleetMissionType } from "./FleetMissionType.js"
 
@@ -9,9 +9,9 @@ export interface FleetMission {
     type: FleetMissionType
     status: FleetMissionStatus
 
-    ships: FleetComposition
+    ships: SendableFleetComposition
 
-    cargoHold: ResourcesRecord
+    carriedResources: ResourcesRecord
 
     origin: {
         id: string
