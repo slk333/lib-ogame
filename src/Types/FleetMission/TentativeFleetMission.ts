@@ -11,5 +11,5 @@ export interface TentativeFleetMission {
     destination: {
         id: string
     }
-    cargoHold: ResourcesRecord
+    carriedResources: ResourcesRecord
 }

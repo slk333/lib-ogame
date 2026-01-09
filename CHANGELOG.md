@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.7
+
+### Fixed
+
+-   `TentativeFleetMission` now correctly uses `carriedResources` instead of `cargoHold`
+
 ## 2.5.6
 
 ### Added
