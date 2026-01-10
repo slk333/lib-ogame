@@ -4,11 +4,11 @@
 
 ### Changes
 
--   rename `computeCargoCapacityForShips` to `getCargoCapacityForShips`
+-   renamed: `computeCargoCapacityForShips()` -> `getCargoCapacityForShips()`
 
 ### Added
 
--   **Cargo capacity helper:** `resourcesFitCargoCapacity`
+-   **Cargo capacity helper:** `resourcesFitCargoCapacity()`
 
 ## 2.5.8
 
