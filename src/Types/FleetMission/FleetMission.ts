@@ -1,6 +1,6 @@
 import { Coordinates } from "../Coordinates.js"
 import { ResourcesRecord } from "../ResourcesRecord.js"
-import { SendableFleetComposition } from "./SendableFleetComposition.js"
+import { FleetShips } from "./FleetShips.js"
 import { FleetMissionStatus } from "./FleetMissionStatus.js"
 import { FleetMissionType } from "./FleetMissionType.js"
 
@@ -9,7 +9,7 @@ export interface FleetMission {
     type: FleetMissionType
     status: FleetMissionStatus
 
-    ships: SendableFleetComposition
+    ships: FleetShips
 
     carriedResources: ResourcesRecord
 

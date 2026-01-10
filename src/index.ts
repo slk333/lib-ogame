@@ -66,7 +66,7 @@ export type { FleetMissionStatus } from "./Types/FleetMission/FleetMissionStatus
 
 // Types/Shipyard
 export type { ShipName } from "./Types/Shipyard/ShipName.js"
-export type { SendableShipName } from "./Types/FleetMission/SendableShipName.js"
+export type { FleetShipName } from "./Types/FleetMission/FleetShipName.js"
 export type { DefenseName } from "./Types/Shipyard/DefenseName.js"
 export type { ShipyardOrder } from "./Types/Shipyard/ShipyardOrder.js"
 export type { ShipyardUnit } from "./Types/Shipyard/ShipyardUnit.js"

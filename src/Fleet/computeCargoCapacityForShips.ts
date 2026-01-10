@@ -1,7 +1,7 @@
-import type { SendableFleetComposition } from "../Types/FleetMission/SendableFleetComposition.js"
+import type { FleetShips } from "../Types/FleetMission/FleetShips.js"
 import { cargoCapacityByShipName } from "../StaticData/cargoCapacityByShipName.js"
 
-export function computeCargoCapacityForShips(ships: SendableFleetComposition): number {
+export function computeCargoCapacityForShips(ships: FleetShips): number {
     let cargoCapacity = 0
 
     for (const shipCategory of Object.values(ships)) {
