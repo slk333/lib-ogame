@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.5.10
+
+### Fixes
+
+-   correctly export helper functions
+
 ## 2.5.9
 
 ### Changes

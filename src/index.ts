@@ -1,3 +1,8 @@
+// Construction Time
+export { getStructureConstructionTime } from "./ConstructionTime/getStructureConstructionTime.js"
+export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
+export { computeStructureUpgradeTimeForPlanet } from "./ConstructionTime/computeStructureUpgradeTimeForPlanet.js"
+
 // Cost
 export { getStructureCompoundedCost } from "./Cost/getStructureCompoundedCost.js"
 export { getStructureCost } from "./Cost/getStructureCost.js"
@@ -6,10 +11,9 @@ export { getDefenseCost } from "./Cost/getDefenseCost.js"
 export { getShipyardUnitCost } from "./Cost/getShipyardUnitCost.js"
 export { computeStructureUpgradeCostForPlanet } from "./Cost/computeStructureUpgradeCostForPlanet.js"
 
-// Construction Time
-export { getStructureConstructionTime } from "./ConstructionTime/getStructureConstructionTime.js"
-export { getShipyardUnitConstructionTime } from "./ConstructionTime/getShipyardUnitConstructionTime.js"
-export { computeStructureUpgradeTimeForPlanet } from "./ConstructionTime/computeStructureUpgradeTimeForPlanet.js"
+// Fleet
+export { getCargoCapacityForShips } from "./Fleet/getCargoCapacityForShips.js"
+export { resourcesFitCargoCapacity } from "./Fleet/resourcesFitCargoCapacity.js"
 
 // Production
 export { getMetalMineProduction } from "./Production/getMetalMineProduction.js"
