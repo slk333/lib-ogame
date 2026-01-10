@@ -1,16 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "ES2022",
-    "module": "NodeNext",    
-    "moduleResolution": "nodenext",
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "declaration": true,
-    "sourceMap": true,
-    "outDir": "./dist",
-    "isolatedModules": true,
-    "skipLibCheck": true
-
-  },
-  "include": ["src"],
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": true,
+        "outDir": "./dist",
+        "isolatedModules": true,
+        "skipLibCheck": true
+    },
+    "include": ["src"]
 }
