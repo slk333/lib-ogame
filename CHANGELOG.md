@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.5.9
+
+### Changes
+
+-   rename `computeCargoCapacityForShips` to `getCargoCapacityForShips`
+
+### Added
+
+-   **Cargo capacity helper:** `resourcesFitCargoCapacity`
+
 ## 2.5.8
 
 ### Changed
