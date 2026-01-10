@@ -67,10 +67,11 @@ export type { TentativeFleetMission } from "./Types/FleetMission/TentativeFleetM
 export type { FleetMission } from "./Types/FleetMission/FleetMission.js"
 export type { FleetMissionType } from "./Types/FleetMission/FleetMissionType.js"
 export type { FleetMissionStatus } from "./Types/FleetMission/FleetMissionStatus.js"
+export type { FleetShips } from "./Types/FleetMission/FleetShips.js"
+export type { FleetShipName } from "./Types/FleetMission/FleetShipName.js"
 
 // Types/Shipyard
 export type { ShipName } from "./Types/Shipyard/ShipName.js"
-export type { FleetShipName } from "./Types/FleetMission/FleetShipName.js"
 export type { DefenseName } from "./Types/Shipyard/DefenseName.js"
 export type { ShipyardOrder } from "./Types/Shipyard/ShipyardOrder.js"
 export type { ShipyardUnit } from "./Types/Shipyard/ShipyardUnit.js"
