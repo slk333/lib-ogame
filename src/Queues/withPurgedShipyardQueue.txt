@@ -1,0 +1,7 @@
+import { Planet } from "../Types/Planet.js"
+
+export function withPurgedShipyardQueue(planet: Planet): Planet {
+    planet = structuredClone(planet)
+    /* todo */
+    return planet
+}

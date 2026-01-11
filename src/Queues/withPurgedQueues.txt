@@ -1,0 +1,8 @@
+import { Planet } from "../Types/Planet.js"
+
+export function withPurgedQueues(planet: Planet): Planet {
+    /* ensure we don't mutate the original planet object */
+    planet = structuredClone(planet)
+    /* todo */
+    return planet
+}
