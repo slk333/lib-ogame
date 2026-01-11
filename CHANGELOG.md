@@ -4,10 +4,9 @@
 
 ### Changes
 
--   `FleetMission`: remove `sender` and `receiver` fields: the `origin` and `destination` objects now already contain such data.
--   `origin` is `PublicPlanet` or `PublicMoon`.
--   `destination` is `PublicPlanet` or `PublicMoon`.
-    -   It can also be `DebrisField` or `ExpeditionSite`. In that case, there is no owner.
+-   `FleetMission`: remove `sender` and `receiver`: the `origin` and `destination` objects now already contain such data.
+-   `origin` is now typed as `PublicPlanet` or `PublicMoon`.
+-   `destination` is now typed as `PublicPlanet`, `PublicMoon`, `DebrisField` or `ExpeditionSite`.
 
 ## 2.5.10
 
