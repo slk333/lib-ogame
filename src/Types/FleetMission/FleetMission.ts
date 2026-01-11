@@ -13,24 +13,14 @@ export interface FleetMission {
 
     ships: FleetShips
     carriedResources: ResourcesRecord
+
     origin: PublicPlanet | PublicMoon
-    destination: PublicPlanet | PublicMoon | ExpeditionSite | DebrisField
-
-    sender: {
-        id: string
-        name: string
-    }
-
-    receiver: {
-        id: string
-        name: string
-    }
+    destination: PublicPlanet | PublicMoon | DebrisField | ExpeditionSite
 
     departureDate: string
     arrivalDate: string
     returnDate: string
 
     expireAt?: Date
-    // timestamp for firestore periodic deletion, set to return date + 24hours
-    // set type to Date so it's stored as Timestamp in the DB
+    // the expiration date is added to the mission when it's marked as returned.
 }
