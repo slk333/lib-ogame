@@ -1,8 +1,10 @@
-import { Coordinates } from "../Coordinates.js"
 import { ResourcesRecord } from "../ResourcesRecord.js"
 import { FleetShips } from "./FleetShips.js"
 import { FleetMissionStatus } from "./FleetMissionStatus.js"
 import { FleetMissionType } from "./FleetMissionType.js"
+import { DebrisField, ExpeditionSite } from "./FleetDestination.js"
+import { PublicPlanet } from "../PublicPlanet.js"
+import { PublicMoon } from "../PublicMoon.js"
 
 export interface FleetMission {
     id: string
@@ -10,22 +12,9 @@ export interface FleetMission {
     status: FleetMissionStatus
 
     ships: FleetShips
-
     carriedResources: ResourcesRecord
-
-    origin: {
-        id: string
-        name: string
-        coordinates: Coordinates
-        type: string
-    }
-
-    destination: {
-        id: string
-        name?: string
-        coordinates: Coordinates
-        type: string
-    }
+    origin: PublicPlanet | PublicMoon
+    destination: PublicPlanet | PublicMoon | ExpeditionSite | DebrisField
 
     sender: {
         id: string

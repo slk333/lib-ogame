@@ -1,6 +1,6 @@
 import { Coordinates } from "./Coordinates.js"
 
-export interface PublicPlanet {
+export interface PublicMoon {
     id: string
     name: string
     owner: {
@@ -8,5 +8,5 @@ export interface PublicPlanet {
         name: string
     }
     coordinates: Coordinates
-    type: "planet"
+    type: "Moon"
 }

@@ -3,3 +3,5 @@ export interface Coordinates {
     solarSystem: number
     planetPosition: number
 }
+
+/* todo, rename planetPosition to position */
