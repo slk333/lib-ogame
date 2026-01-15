@@ -25,6 +25,7 @@ export { computeProductionForPlanet } from "./Production/computeProductionForPla
 export { shipNames } from "./StaticData/shipNames.js"
 export { structureNames } from "./StaticData/structureNames.js"
 export { defenseNames } from "./StaticData/defenseNames.js"
+export { cargoCapacityByShipName } from "./StaticData/cargoCapacityByShipName.js"
 export { baseSpeedByShipName } from "./StaticData/baseSpeedByShipName.js"
 export { baseConsumptionByShipName } from "./StaticData/baseConsumptionByShipName.js"
 
