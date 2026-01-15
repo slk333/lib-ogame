@@ -10,8 +10,6 @@ import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSyn
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { formatResourceShort } from "../Misc/Format/formatResourceShort.js"
 import { getRandomTemperatureForPosition } from "../Misc/getRandomTemperatureForPosition.js"
-import { baseSpeedByShipName } from "../StaticData/baseSpeedByShipName.js"
-import { baseConsumptionByShipName } from "../StaticData/baseConsumptionByShipName.js"
 
 console.log("# costs")
 
@@ -90,17 +88,3 @@ console.table([
     getRandomTemperatureForPosition(15),
     getRandomTemperatureForPosition(15),
 ])
-
-console.log("\n# Static Data")
-
-console.log("baseSpeedByShipName['lightFighter']:")
-console.log(baseSpeedByShipName["lightFighter"])
-
-console.log("baseSpeedByShipName['espionageProbe']:")
-console.log(baseSpeedByShipName["espionageProbe"])
-
-console.log("baseConsumptionByShipName['lightFighter']:")
-console.log(baseConsumptionByShipName["lightFighter"])
-
-console.log("baseConsumptionByShipName['bomber']:")
-console.log(baseConsumptionByShipName["bomber"])
