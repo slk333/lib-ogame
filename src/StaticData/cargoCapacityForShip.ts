@@ -1,6 +1,6 @@
 import { FleetShipName } from "../Types/FleetMission/FleetShipName.js"
 
-export const cargoCapacityByShipName: Record<FleetShipName, number> = {
+export const cargoCapacityForShip: Record<FleetShipName, number> = {
     lightFighter: 50,
     heavyFighter: 100,
     cruiser: 800,

@@ -2,7 +2,7 @@ import { FleetShipName } from "../Types/FleetMission/FleetShipName.js"
 
 /* note: some ships have higher base consumption when upgrading to a different engine */
 
-export const baseConsumptionByShipName: Record<FleetShipName, number> = {
+export const starterConsumptionForShip: Record<FleetShipName, number> = {
     lightFighter: 20,
     heavyFighter: 75,
     cruiser: 300,
