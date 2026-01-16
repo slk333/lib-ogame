@@ -1,6 +1,6 @@
 import { FleetShipName } from "../Types/FleetMission/FleetShipName.js"
 
-/* note: some ships have higher base consumption when upgrading to a different engine */
+/* note: small cargos and recyclers switch to a different consumption when upgrading to a different "drive" */
 
 export const starterConsumptionForShip: Record<FleetShipName, number> = {
     lightFighter: 20,
