@@ -15,7 +15,6 @@ export function getFlightTime({
     flightTimeSetting,
 }: getFlightTimeParams) {
     const minimumBuffer = 10
-
     /* example: distance 20000 (across one galaxy) for a ship with 20000 speed (heavy fighter with impulse drive 5)*/
     const distance = getFlightDistance({ origin, destination, numberOfGalaxies: 9 })
     const linearTime = distance / fleetSpeed

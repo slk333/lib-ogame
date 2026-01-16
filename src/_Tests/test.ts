@@ -12,6 +12,9 @@ import { formatResourceShort } from "../Misc/Format/formatResourceShort.js"
 import { getRandomTemperatureForPosition } from "../Misc/getRandomTemperatureForPosition.js"
 import { getShipSpeed } from "../Fleet/getShipSpeed.js"
 import { getFlightDistance } from "../Fleet/getFlightDistance.js"
+import { FleetShips } from "../Types/FleetMission/FleetShips.js"
+import { getFleetSpeed } from "../Fleet/getFleetSpeed.js"
+import { getFlightTime } from "../Fleet/getFlightTime.js"
 
 console.log("████████████████████████████\ncosts")
 
@@ -167,3 +170,63 @@ console.log(
         numberOfGalaxies: 9,
     })
 ) // intrasystem
+
+const fleetShips: FleetShips = {
+    smallCargo: { name: "smallCargo", count: 10 },
+    largeCargo: { name: "largeCargo", count: 10 },
+}
+console.log("████████████████████████████\nFleet speed calculation")
+console.log("Fleet: smallCargo, largeCargo with 0:0:0. target: 5000 from small cargo")
+console.log(
+    getFleetSpeed({
+        fleetShips,
+        combustionDrive: 0,
+        impulseDrive: 0,
+        hyperspaceDrive: 0,
+    })
+)
+console.log("Fleet: smallCargo, largeCargo with 5:5:5, target: 11250 from large cargo")
+console.log(
+    getFleetSpeed({
+        fleetShips,
+        combustionDrive: 5,
+        impulseDrive: 5,
+        hyperspaceDrive: 5,
+    })
+)
+
+console.log("████████████████████████████\nFlight time")
+console.log(
+    "█fleet of 10 smallCargo and 10 largeCargo\nfrom 2:100:8 to 3:200:8\n with 5:0:0 (speed 7500), flight time setting 1"
+)
+console.log("expected: 18084 seconds (5 hours 1 minute 24 seconds)")
+console.log(
+    getFlightTime({
+        origin: { galaxy: 2, solarSystem: 100, planetPosition: 8 },
+        destination: { galaxy: 3, solarSystem: 200, planetPosition: 8 },
+        fleetSpeed: getFleetSpeed({
+            fleetShips,
+            combustionDrive: 5,
+            impulseDrive: 0,
+            hyperspaceDrive: 0,
+        }),
+        flightTimeSetting: 1,
+    })
+)
+console.log(
+    "█fleet of 10 largeCargo\nfrom 1:3:8 to 1:5:8\n with 5:0:0 (speed 11250), flight time setting 1"
+)
+console.log("expected: 5620 seconds (1 hour 33 minutes 40 seconds)")
+console.log(
+    getFlightTime({
+        origin: { galaxy: 1, solarSystem: 3, planetPosition: 8 },
+        destination: { galaxy: 1, solarSystem: 5, planetPosition: 8 },
+        fleetSpeed: getFleetSpeed({
+            fleetShips: { largeCargo: { name: "largeCargo", count: 10 } },
+            combustionDrive: 5,
+            impulseDrive: 0,
+            hyperspaceDrive: 0,
+        }),
+        flightTimeSetting: 1,
+    })
+)
