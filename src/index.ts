@@ -16,6 +16,7 @@ export { getCargoCapacityForShips } from "./Fleet/getCargoCapacityForShips.js"
 export { resourcesFitCargoCapacity } from "./Fleet/resourcesFitCargoCapacity.js"
 export { getShipSpeed } from "./Fleet/getShipSpeed.js"
 export { getFlightDistance } from "./Fleet/getFlightDistance.js"
+export { getFlightTime } from "./Fleet/getFlightTime.js"
 
 // Production
 export { getMetalMineProduction } from "./Production/getMetalMineProduction.js"
