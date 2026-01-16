@@ -10,8 +10,9 @@ import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSyn
 import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { formatResourceShort } from "../Misc/Format/formatResourceShort.js"
 import { getRandomTemperatureForPosition } from "../Misc/getRandomTemperatureForPosition.js"
+import { getShipSpeed } from "../Fleet/getShipSpeed.js"
 
-console.log("# costs")
+console.log("████████████████████████████\ncosts")
 
 console.log('getStructureCost("crystalMine", 9):')
 console.log(getStructureCost("crystalMine", 9))
@@ -25,7 +26,7 @@ console.log(getDefenseCost("rocketLauncher"))
 console.log('getStructureCompoundedCost("crystalMine", 9):')
 console.log(getStructureCompoundedCost("crystalMine", 9))
 
-console.log("\n# construction time")
+console.log("████████████████████████████\nConstruction time")
 
 console.log(
     "getStructureConstructionTime({ structureName: 'researchLab', level: 5, roboticsFactory: 3, naniteFactory: 0 }):"
@@ -59,7 +60,7 @@ console.log(
     })
 )
 
-console.log("\n# production")
+console.log("████████████████████████████\nProduction")
 
 console.log("getMetalMineProduction(25):")
 console.log(getMetalMineProduction(25))
@@ -75,7 +76,7 @@ console.log(getDeuteriumSynthesizerProduction(25, 110))
 console.log(getDeuteriumSynthesizerProduction(25, 360))
 console.log(getDeuteriumSynthesizerProduction(25, -130))
 
-console.log("\nMISC")
+console.log("████████████████████████████\nMISC")
 
 console.log("formatResourceShort(1234567):")
 console.log(formatResourceShort(1234567))
@@ -87,4 +88,52 @@ console.table([
     getRandomTemperatureForPosition(15),
     getRandomTemperatureForPosition(15),
     getRandomTemperatureForPosition(15),
+])
+
+console.log("████████████████████████████\nFLEET speed calculation")
+console.log("smallCargo with 5:3:3 (combustion drive 5)")
+console.log("smallCargo with 5:5:3 (impulse drive 5)")
+console.log("smallCargo with 5:9:3 (impulse drive 9)")
+console.table([
+    getShipSpeed({
+        shipName: "smallCargo",
+        combustionDrive: 5,
+        impulseDrive: 3,
+        hyperspaceDrive: 3,
+    }),
+    getShipSpeed({
+        shipName: "smallCargo",
+        combustionDrive: 5,
+        impulseDrive: 5,
+        hyperspaceDrive: 3,
+    }),
+    getShipSpeed({
+        shipName: "smallCargo",
+        combustionDrive: 5,
+        impulseDrive: 9,
+        hyperspaceDrive: 3,
+    }),
+])
+console.log("recycler with 15:10:10 (combustion drive 15)")
+console.log("recycler with 15:17:10 (impulse drive 17)")
+console.log("recycler with 15:17:15 (hyperspace drive 15)")
+console.table([
+    getShipSpeed({
+        shipName: "recycler",
+        combustionDrive: 15,
+        impulseDrive: 10,
+        hyperspaceDrive: 10,
+    }),
+    getShipSpeed({
+        shipName: "recycler",
+        combustionDrive: 15,
+        impulseDrive: 17,
+        hyperspaceDrive: 10,
+    }),
+    getShipSpeed({
+        shipName: "recycler",
+        combustionDrive: 15,
+        impulseDrive: 17,
+        hyperspaceDrive: 15,
+    }),
 ])

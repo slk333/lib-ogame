@@ -14,6 +14,7 @@ export { computeStructureUpgradeCostForPlanet } from "./Cost/computeStructureUpg
 // Fleet
 export { getCargoCapacityForShips } from "./Fleet/getCargoCapacityForShips.js"
 export { resourcesFitCargoCapacity } from "./Fleet/resourcesFitCargoCapacity.js"
+export { getShipSpeed } from "./Fleet/getShipSpeed.js"
 
 // Production
 export { getMetalMineProduction } from "./Production/getMetalMineProduction.js"

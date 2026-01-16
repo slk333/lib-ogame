@@ -2,7 +2,7 @@ import { FleetShipName } from "../Types/FleetMission/FleetShipName.js"
 
 /* note: some ships have higher base speed when upgrading to a different engine */
 
-export const baseSpeedByShipName: Record<FleetShipName, number> = {
+export const starterSpeedByShipName: Record<FleetShipName, number> = {
     lightFighter: 12500,
     heavyFighter: 10000,
     cruiser: 15000,
