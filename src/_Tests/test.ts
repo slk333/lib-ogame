@@ -11,6 +11,7 @@ import { getMetalMineProduction } from "../Production/getMetalMineProduction.js"
 import { formatResourceShort } from "../Misc/Format/formatResourceShort.js"
 import { getRandomTemperatureForPosition } from "../Misc/getRandomTemperatureForPosition.js"
 import { getShipSpeed } from "../Fleet/getShipSpeed.js"
+import { getFlightDistance } from "../Fleet/getFlightDistance.js"
 
 console.log("████████████████████████████\ncosts")
 
@@ -137,3 +138,32 @@ console.table([
         hyperspaceDrive: 15,
     }),
 ])
+
+console.log("████████████████████████████\nDistance calculation")
+
+console.log("█2:100:8 to 8:200:8, numberOfGalaxies: 9")
+console.log(
+    getFlightDistance({
+        origin: { galaxy: 2, solarSystem: 100, planetPosition: 8 },
+        destination: { galaxy: 8, solarSystem: 200, planetPosition: 8 },
+        numberOfGalaxies: 9,
+    })
+) // intergalactic
+
+console.log("█2:100:8 to 2:400:8, numberOfGalaxies: 9")
+console.log(
+    getFlightDistance({
+        origin: { galaxy: 2, solarSystem: 100, planetPosition: 8 },
+        destination: { galaxy: 2, solarSystem: 400, planetPosition: 8 },
+        numberOfGalaxies: 9,
+    })
+) // intersystem
+
+console.log("█2:100:5 to 2:100:10, numberOfGalaxies: 9")
+console.log(
+    getFlightDistance({
+        origin: { galaxy: 2, solarSystem: 100, planetPosition: 5 },
+        destination: { galaxy: 2, solarSystem: 100, planetPosition: 10 },
+        numberOfGalaxies: 9,
+    })
+) // intrasystem
