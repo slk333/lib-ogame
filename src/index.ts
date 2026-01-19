@@ -67,7 +67,6 @@ export type { SystemMessage } from "./Types/Message.js"
 export type { SpyReportPlanetData } from "./Types/Message.js"
 
 // Types/FleetMission
-export type { TentativeFleetMission } from "./Types/FleetMission/TentativeFleetMission.js"
 export type { FleetMission } from "./Types/FleetMission/FleetMission.js"
 export type { FleetMissionType } from "./Types/FleetMission/FleetMissionType.js"
 export type { FleetMissionStatus } from "./Types/FleetMission/FleetMissionStatus.js"
