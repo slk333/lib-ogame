@@ -14,6 +14,7 @@ export { computeStructureUpgradeCostForPlanet } from "./Cost/computeStructureUpg
 // Fleet
 export { getCargoCapacityForShips } from "./Fleet/getCargoCapacityForShips.js"
 export { resourcesFitCargoCapacity } from "./Fleet/resourcesFitCargoCapacity.js"
+// export { starterFuelConsumptionForShip } from "./StaticData/starterConsumptionForShip.js"
 export { getShipSpeed } from "./Fleet/getShipSpeed.js"
 export { getFlightDistance } from "./Fleet/getFlightDistance.js"
 export { getFlightTime } from "./Fleet/getFlightTime.js"
@@ -47,7 +48,10 @@ export { formatResourceShort } from "./Misc/Format/formatResourceShort.js"
 export { formatTimeInterval } from "./Misc/Format/formatTimeInterval.js"
 export { formatCoordinates } from "./Misc/Format/formatCoordinates.js"
 
-// Types
+// Types ||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// Types ||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+// Types ||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
 export type { Planet } from "./Types/Planet.js"
 export type { Player } from "./Types/Player.js"
 export type { PlanetStructure } from "./Types/Structure/PlanetStructure.js"

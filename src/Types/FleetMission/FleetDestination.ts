@@ -1,6 +1,6 @@
 import { Coordinates } from "../Coordinates.js"
-import { PublicMoon } from "../PublicMoon.js"
-import { PublicPlanet } from "../PublicPlanet.js"
+// import { PublicMoon } from "../PublicMoon.js"
+// import { PublicPlanet } from "../PublicPlanet.js"
 
 export type DebrisField = {
     coordinates: Coordinates
@@ -11,4 +11,4 @@ export type ExpeditionSite = {
     type: "expeditionSite"
 }
 
-export type FleetDestination = PublicPlanet | DebrisField | ExpeditionSite | PublicMoon
+// export type FleetDestination = PublicPlanet | DebrisField | ExpeditionSite | PublicMoon
