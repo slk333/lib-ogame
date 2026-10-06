@@ -20,10 +20,9 @@ export function computeProductionForPlanet(planet: Planet): ResourcesProduction 
     /* 0.2 mines production */
     const metalMineProduction = getMetalMineProduction(metalMine.level)
     const crystalMineProduction = getCrystalMineProduction(crystalMine.level)
-    const deuteriumMineProduction = getDeuteriumSynthesizerProduction(
-        deuteriumSynthesizer.level,
-        planet.temperature
-    )
+    const deuteriumMineProduction = getDeuteriumSynthesizerProduction(deuteriumSynthesizer.level, {
+        planetMaxTemp: planet.temperature,
+    })
     /* 0.3 base + mines production */
     const metalProduction = metalMineProduction + baseProduction.metalProduction
     const crystalProduction = crystalMineProduction + baseProduction.crystalProduction

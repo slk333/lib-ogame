@@ -74,11 +74,11 @@ console.log(getCrystalMineProduction(25))
 
 console.log("getDeuteriumSynthesizerProduction(25):")
 console.log(getDeuteriumSynthesizerProduction(25))
-console.log(getDeuteriumSynthesizerProduction(25, 0))
-console.log(getDeuteriumSynthesizerProduction(25, 60))
-console.log(getDeuteriumSynthesizerProduction(25, 110))
-console.log(getDeuteriumSynthesizerProduction(25, 360))
-console.log(getDeuteriumSynthesizerProduction(25, -130))
+console.log(getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 0 }))
+console.log(getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 60 }))
+console.log(getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 110 }))
+console.log(getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 360 }))
+console.log(getDeuteriumSynthesizerProduction(25, { planetMaxTemp: -130 }))
 
 console.log("████████████████████████████\nMISC")
 
