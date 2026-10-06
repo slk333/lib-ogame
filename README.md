@@ -63,17 +63,24 @@ getShipyardUnitConstructionTime({ type: "defense", name: "rocketLauncher" }, 5, 
 
 ## production
 
-Get the production for a given mine and its level, per second. We can also add modifiers:
+Get the production for a given mine and its level:
 
 ```typescript
 getMetalMineProduction(25)
 /* 2.25722222 metal (per second) */
 
-getMetalMineProduction(25, { economySpeed: 2, plasmaTechnology: 20 })
-/* 5.41722222 metal (per second) */
-
 getCrystalMineProduction(25)
 /* 1.50472222 crystal (per second) */
+
+getDeuteriumSynthesizerProduction(25)
+/* 1.08333333 deuterium (per second) at 0°C (default) */
+```
+
+We can add modifiers:
+
+```typescript
+getMetalMineProduction(25, { economySpeed: 2, plasmaTechnology: 20 })
+/* 5.41722222 metal (per second) */
 
 getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 0 })
 /* 1.08333333 deuterium (per second) at 0°C */
