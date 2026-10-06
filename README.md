@@ -17,7 +17,7 @@ getStructureCost("crystalMine", 9) // { metal: 2061, crystal: 1030, deuterium: 0
 ```
 
 > [!TIP]  
-> The library assumes a x1 universe speed. All durations are expressed in seconds. Resource production is expressed per second.
+> The library defaults to x1 universe speed. Mine production functions accept an optional `economySpeed` modifier. All durations are expressed in seconds. Resource production is expressed per second.
 
 ## costs
 
@@ -54,40 +54,33 @@ getStructureConstructionTime({
 })
 /* 2304 seconds */
 
-getShipConstructionTime({
-    shipName: "lightFighter",
-    shipyard: 5,
-    naniteFactory: 1,
-})
+getShipyardUnitConstructionTime({ type: "ship", name: "lightFighter" }, 5, 1)
 /* 480 seconds */
 
-getDefenseConstructionTime({
-    defenseName: "rocketLauncher",
-    shipyard: 5,
-    naniteFactory: 1,
-})
+getShipyardUnitConstructionTime({ type: "defense", name: "rocketLauncher" }, 5, 1)
 /* 240 seconds */
 ```
 
 ## production
 
-Get the production for a given mine and its level, per second:
+Get the production for a given mine and its level, per second. We can also add modifiers:
 
 ```typescript
 getMetalMineProduction(25)
 /* 2.25722222 metal (per second) */
 
+getMetalMineProduction(25, { economySpeed: 2, plasmaTechnology: 20 })
+/* 5.41722222 metal (per second) */
+
 getCrystalMineProduction(25)
 /* 1.50472222 crystal (per second) */
 
-getDeuteriumSynthesizerProduction(25, 0)
+getDeuteriumSynthesizerProduction(25, { planetMaxTemp: 0 })
 /* 1.08333333 deuterium (per second) at 0°C */
 
-getDeuteriumSynthesizerProduction(25, -130)
+getDeuteriumSynthesizerProduction(25, { planetMaxTemp: -130 })
 /* 1.47472222 deuterium (per second) at -130°C */
 ```
-
-The _Deuterium Synthesizer_ takes into account the planet's _max temperature_. The temperature defaults to 0°C if omitted.
 
 ## misc
 

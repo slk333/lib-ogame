@@ -1,3 +1,5 @@
+/// <reference types="node" />
+import { strict as assert } from "node:assert"
 import { getDefenseCost } from "../Cost/getDefenseCost.js"
 import { getShipCost } from "../Cost/getShipCost.js"
 import { getStructureCompoundedCost } from "../Cost/getStructureCompoundedCost.js"
@@ -71,6 +73,20 @@ console.log(getMetalMineProduction(25))
 
 console.log("getCrystalMineProduction(25):")
 console.log(getCrystalMineProduction(25))
+
+assert.equal(getCrystalMineProduction(25), 5417 / 3600)
+assert.equal(getCrystalMineProduction(25, {}), 5417 / 3600)
+assert.equal(getCrystalMineProduction(25, { economySpeed: 2 }), 10834 / 3600)
+assert.equal(getCrystalMineProduction(25, { plasmaTechnology: 20 }), 6132 / 3600)
+assert.equal(
+    getCrystalMineProduction(25, { economySpeed: 2, plasmaTechnology: 20 }),
+    12264 / 3600,
+)
+assert.equal(getCrystalMineProduction(0, { economySpeed: 2, plasmaTechnology: 20 }), 0)
+// Round the bonus separately, and calculate it before flooring the base.
+assert.equal(getCrystalMineProduction(1, { plasmaTechnology: 4 }), 23 / 3600)
+assert.equal(getCrystalMineProduction(2, { plasmaTechnology: 11 }), 52 / 3600)
+assert.equal(getCrystalMineProduction(25, { planetMaxTemp: -130 }), 5417 / 3600)
 
 console.log("getDeuteriumSynthesizerProduction(25):")
 console.log(getDeuteriumSynthesizerProduction(25))

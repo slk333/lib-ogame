@@ -1,4 +1,10 @@
-export function getCrystalMineProduction(currentLevel: number): number {
-    const crystalProduction = Math.trunc(20 * currentLevel * 1.1 ** currentLevel) / 3600
-    return crystalProduction
+import type { ProductionModifiers } from "./ProductionModifiers.js"
+
+// Plasma adds 0.66% per level, calculated from the unfloored base production.
+export function getCrystalMineProduction(level: number, modifiers: ProductionModifiers = {}): number {
+    const { economySpeed = 1, plasmaTechnology = 0 } = modifiers
+    const base = 20 * level * 1.1 ** level * economySpeed
+    const plasmaBonus = base * (plasmaTechnology * 0.0066)
+    const hourlyProduction = Math.floor(base) + Math.round(plasmaBonus)
+    return hourlyProduction / 3600
 }
