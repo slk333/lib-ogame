@@ -62,6 +62,7 @@ export type { Coordinates } from "./Types/Coordinates.js"
 export type { ResourcesRecord } from "./Types/ResourcesRecord.js"
 export type { PublicPlanet } from "./Types/PublicPlanet.js"
 export type { PublicPlayer } from "./Types/PublicPlayer.js"
+export type { ProductionModifiers } from "./Production/ProductionModifiers.js"
 
 // Types/Messages
 export type { Message } from "./Types/Message.js"

@@ -16,7 +16,7 @@ export interface Planet {
 
     createdAt?: string // ISO
     coordinates: Coordinates
-    temperature: number
+    temperature: number // max temperature in °C aka `maxTemp` in OGame formulas
 
     structures: Record<StructureName, PlanetStructure>
     ships: Record<ShipName, { name: ShipName; count: number }>
