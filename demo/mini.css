@@ -1,0 +1,319 @@
+/* General */
+:root {
+    --dark: #282a36; /* 223 b */
+
+    --gray-100: #f2f2f2;
+    --gray-200: #e0e0e0;
+    --gray-300: #d3d3d3;
+    --gray-400: #c4c4c4;
+    --gray-500: #b4b4b4;
+    --gray-600: #888;
+    --gray-700: #555;
+    --gray-800: #333;
+    --gray-900: #222;
+
+    --secondary-color: var(--gray-500);
+    --link-color: #1b256a; /* 126 b */
+    --link-visited-color: #450963; /* 406 b */
+    --error-color: #cc0000; /* c00 r */
+
+    --code-background: var(--gray-900);
+    --blockquote-border-left: var(--gray-900);
+    --blockquote-background: var(--gray-100);
+    --hr-color: var(--gray-100);
+
+    --sans-serif-font-stack: system-ui, -apple-system, Roboto, "Segoe UI", Oxygen, Ubuntu;
+    --monospace-font-stack: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+/* Buttons and Inputs alike */
+
+/* Common styles for controls */
+button,
+.buttonShape,
+input,
+select,
+textarea {
+    /* fight browser style */
+    font-family: inherit;
+    font-size: 14px;
+    color: inherit;
+    background: transparent;
+    /* border */
+    border-radius: 3px;
+    border: 1px solid var(--gray-300);
+}
+
+button,
+.buttonShape {
+    display: inline-block;
+    font-weight: 600;
+
+    padding: 8px 16px; /* y x */
+    cursor: pointer;
+    /* margin-right: 8px; */
+    /* safari */
+    height: 36px;
+
+    user-select: none;
+
+    /* the hover style should not affect disabled button */
+    &:hover:not(:disabled) {
+        /* changing background from transparent to color does not guarantee a visual change */
+        background: var(--gray-100);
+        text-decoration: none;
+    }
+    /* the active style should not affect disabled button */
+    &:active:not(:disabled) {
+        transform: translateY(1px);
+    }
+    &:disabled {
+        color: var(--gray-300); /* secondary text */
+        cursor: not-allowed;
+    }
+    &:visited {
+        color: inherit; /* remove visited link style */
+    }
+}
+
+.subtleButton {
+    border-color: transparent;
+
+    :hover:not(:disabled) {
+        border-color: var(--gray-300);
+    }
+}
+
+select {
+    font-weight: 500;
+    padding: 0.5em 1em;
+    /* Safari needs height else too small */
+    height: 36px;
+    /* -webkit-appearance:none; */
+    user-select: none;
+}
+
+input {
+    display: block;
+    font-weight: 400;
+    padding: 8px 16px; /* y x */
+    width: 300px;
+    margin-top: 4px;
+    height: 36px; /* otherwise too short (34px) */
+}
+
+::placeholder {
+    color: var(--gray-300);
+    font-size: 14px;
+}
+
+input[type="file"] {
+    /* We don't override the default appareance, so we remove the border */
+    border: none;
+}
+
+textarea {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 16px; /* y x */
+    width: 300px;
+    margin-top: 4px;
+    height: 5rem;
+    resize: none;
+}
+
+form {
+    font-family: inherit;
+    font-size: initial;
+    text-align: start;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* anti-aliasing: subpixel-antialiased; */
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--sans-serif-font-stack);
+    color: var(--dark);
+    /* font-family: Season sans Trial, var(--sans-serif-font-stack); */
+}
+
+.container {
+    margin: 0 8px;
+    max-width: 700px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        margin: auto;
+    }
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    &:visited {
+        color: var(--link-color);
+    }
+}
+
+/* Code */
+pre,
+code {
+    /* style du texte préformaté, en particulier le code */
+    /* le retour à la ligne n'a lieu que si le contenu contient un retour à la ligne */
+    /* plus petit que le corps de texte normal */
+    /* par défaut, le code est en 13px , il faut l'aggrandir un peu*/
+    font-size: 14px;
+    /* une scrollbar apparaît uniquement lorsque c'est nécessaire */
+    overflow: auto;
+    /* empêche le mot d'être coupé en deux (contrairement à break-word) */
+    overflow-wrap: normal;
+    /* empêche les espaces d'êtres supprimés (nécessaire pour la tabulation avec espace) */
+    white-space: pre;
+}
+
+code {
+    font-family: var(--monospace-font-stack);
+    background: var(--code-background);
+    color: white;
+    display: block;
+    padding: 1em;
+    margin: 0;
+    padding-left: 2em;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+hr {
+    border: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-top: 1px solid var(--hr-color);
+    /* margin: 27px 5px; */
+}
+
+blockquote {
+    background-color: var(--blockquote-background);
+    padding: 1em;
+    border-left: solid var(--blockquote-border-left) 10px;
+    margin-left: 0;
+    margin-right: 0;
+}
+blockquote p {
+    margin: 0;
+    font-size: 16px;
+    line-height: normal;
+}
+
+/* Misc */
+.errorText {
+    color: var(--error-color);
+}
+
+.secondaryText {
+    color: var(--secondary-color);
+}
+
+mini-ui-paper {
+    display: block;
+    width: max-content;
+    padding: 32px;
+    border: 1px solid var(--gray-300);
+    border-radius: 3px;
+}
+/* Table (not great in mobile) */
+
+table {
+    border-spacing: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    border: 1px solid var(--gray-300);
+}
+td,
+th {
+    border-bottom: 1px solid var(--gray-300);
+    padding: 14px;
+    /*     border-right:black solid 1px; */
+}
+tr:nth-of-type(2n) {
+    background: var(--gray-100);
+}
+th {
+    text-transform: uppercase;
+}
+
+tbody tr:last-of-type td {
+    border: none;
+}
+article {
+    /* have some room at the end of an article */
+    margin-bottom: 4em;
+    max-width: 600px;
+    letter-spacing: -0.01em;
+    /* font-size: 17px; */
+
+    h3 {
+        /* h3 is too close to 16px by default */
+        font-size: 20px;
+    }
+
+    p,
+    li,
+    .secondaryText {
+        font-size: 17px;
+    }
+}
+
+p,
+li {
+    /* default is too tight. best value depends on font. */
+    line-height: 1.55;
+}
+
+p + p {
+    margin-top: 20px;
+}
+
+p + :is(h1, h2, h3, h4, h5) {
+    /* the header follows a paragraph*/
+    margin-bottom: 4px;
+    margin-top: 32px;
+}
+
+ul,
+ol {
+    /* la liste doit être davantage espacée/isolée par rapport au paragraphe précédant*/
+    margin: 20px 0;
+    /* la liste ne doit pas être trop décalée sur la droite sinon elle gâche de l'espace horizontal sur mobile. 
+  Par défaut est 40px (2.5em) */
+    /* fixme */
+    /* augmenter à 3em sur desktop */
+    /* padding-left: 3em; */
+}
+
+li + li {
+    /* Chaque puce doit être davantage espacée de ses puces voisines, sinon elles sont vraiment les unes sur les autres
+  cela passe de 0 à 0.5 em de margin.
+  */
+    margin-top: 4px;
+}
