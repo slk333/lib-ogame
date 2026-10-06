@@ -1,7 +1,9 @@
 import type { ProductionModifiers } from "./ProductionModifiers.js"
 
-// Plasma adds 0.66% per level, calculated from the unfloored base production.
-export function getCrystalMineProduction(level: number, modifiers: ProductionModifiers = {}): number {
+export function getCrystalMineProduction(
+    level: number,
+    modifiers: ProductionModifiers = {},
+): number {
     const { economySpeed = 1, plasmaTechnology = 0 } = modifiers
     const base = 20 * level * 1.1 ** level * economySpeed
     const plasmaBonus = base * (plasmaTechnology * 0.0066)

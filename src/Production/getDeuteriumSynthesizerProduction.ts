@@ -1,16 +1,17 @@
 import type { ProductionModifiers } from "./ProductionModifiers.js"
 
-/**
- * Deuterium Synthesizer production in resources per second.
- *
- * Canonical OGame formula (hourly, floored):
+/* Canonical OGame formula (hourly, floored):
  *   floor(10 * level * 1.1^level * (1.36 - 0.004 * avgTemp))
  *   floor(10 * level * 1.1^level * (1.44 - 0.004 * maxTemp)) // equivalent
  *
  * This library returns per-second production, so it returns:
  *   floor(hourlyProduction) / 3600
+ */
+
+/**
+ * Deuterium Synthesizer production in resources per second.
  *
- * Design choice: `maxTemp` defaults to 0°C.
+ * `maxTemp` defaults to 0°C.
  */
 export function getDeuteriumSynthesizerProduction(
     level: number,
@@ -66,7 +67,6 @@ export function getDeuteriumSynthesizerProduction(
     // 3. rest of calculation
     const base = 10 * levelFactor * temperatureFactor * economySpeed
     const plasmaBonus = base * (plasmaTechnology * 0.0033)
-    const production_h = Math.floor(base) + Math.round(plasmaBonus)
-    const production_s = production_h / 3600
-    return production_s
+    const hourlyProduction = Math.floor(base) + Math.round(plasmaBonus)
+    return hourlyProduction / 3600
 }
