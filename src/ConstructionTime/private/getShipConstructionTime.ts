@@ -1,6 +1,6 @@
-import { getShipCost } from "../Cost/getShipCost.js"
-import { ShipName } from "../Types/Shipyard/ShipName.js"
-import { getShipyardConstructionTime } from "./_getShipyardConstructionTime.js"
+import { getShipCost } from "../../Cost/getShipCost.js"
+import { ShipName } from "../../Types/Shipyard/ShipName.js"
+import { getShipyardConstructionTime } from "./getShipyardConstructionTime.js"
 
 type GetShipConstructionTimeParams = {
     shipName: ShipName

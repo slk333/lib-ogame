@@ -1,11 +1,11 @@
 import { ShipyardUnit } from "../Types/Shipyard/ShipyardUnit.js"
-import { getDefenseConstructionTime } from "./getDefenseConstructionTime.js"
-import { getShipConstructionTime } from "./getShipConstructionTime.js"
+import { getDefenseConstructionTime } from "./private/getDefenseConstructionTime.js"
+import { getShipConstructionTime } from "./private/getShipConstructionTime.js"
 
 export function getShipyardUnitConstructionTime(
     unit: ShipyardUnit,
     shipyardLevel: number,
-    naniteLevel: number
+    naniteLevel: number,
 ) {
     if (unit.type === "ship") {
         return getShipConstructionTime({

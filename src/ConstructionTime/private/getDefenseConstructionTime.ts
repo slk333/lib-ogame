@@ -1,6 +1,6 @@
-import { getDefenseCost } from "../Cost/getDefenseCost.js"
-import { DefenseName } from "../Types/Shipyard/DefenseName.js"
-import { getShipyardConstructionTime } from "./_getShipyardConstructionTime.js"
+import { getDefenseCost } from "../../Cost/getDefenseCost.js"
+import { DefenseName } from "../../Types/Shipyard/DefenseName.js"
+import { getShipyardConstructionTime } from "./getShipyardConstructionTime.js"
 
 type GetDefenseConstructionTimeParams = {
     defenseName: DefenseName

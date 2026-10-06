@@ -2,8 +2,8 @@ import { getDefenseCost } from "../Cost/getDefenseCost.js"
 import { getShipCost } from "../Cost/getShipCost.js"
 import { getStructureCompoundedCost } from "../Cost/getStructureCompoundedCost.js"
 import { getStructureCost } from "../Cost/getStructureCost.js"
-import { getDefenseConstructionTime } from "../ConstructionTime/getDefenseConstructionTime.js"
-import { getShipConstructionTime } from "../ConstructionTime/getShipConstructionTime.js"
+import { getDefenseConstructionTime } from "../ConstructionTime/private/getDefenseConstructionTime.js"
+import { getShipConstructionTime } from "../ConstructionTime/private/getShipConstructionTime.js"
 import { getStructureConstructionTime } from "../ConstructionTime/getStructureConstructionTime.js"
 import { getCrystalMineProduction } from "../Production/getCrystalMineProduction.js"
 import { getDeuteriumSynthesizerProduction } from "../Production/getDeuteriumSynthesizerProduction.js"
@@ -33,7 +33,7 @@ console.log(getStructureCompoundedCost("crystalMine", 9))
 console.log("████████████████████████████\nConstruction time")
 
 console.log(
-    "getStructureConstructionTime({ structureName: 'researchLab', level: 5, roboticsFactory: 3, naniteFactory: 0 }):"
+    "getStructureConstructionTime({ structureName: 'researchLab', level: 5, roboticsFactory: 3, naniteFactory: 0 }):",
 )
 console.log(
     getStructureConstructionTime({
@@ -41,7 +41,7 @@ console.log(
         level: 5,
         roboticsFactory: 3,
         naniteFactory: 0,
-    })
+    }),
 )
 
 console.log("getShipConstructionTime({ shipName: 'lightFighter', shipyard: 5, naniteFactory: 1 }):")
@@ -50,18 +50,18 @@ console.log(
         shipName: "lightFighter",
         shipyard: 5,
         naniteFactory: 1,
-    })
+    }),
 )
 
 console.log(
-    "getDefenseConstructionTime({ defenseName: 'rocketLauncher', shipyard: 5, naniteFactory: 1 }):"
+    "getDefenseConstructionTime({ defenseName: 'rocketLauncher', shipyard: 5, naniteFactory: 1 }):",
 )
 console.log(
     getDefenseConstructionTime({
         defenseName: "rocketLauncher",
         shipyard: 5,
         naniteFactory: 1,
-    })
+    }),
 )
 
 console.log("████████████████████████████\nProduction")
@@ -150,7 +150,7 @@ console.log(
         origin: { galaxy: 2, solarSystem: 100, planetPosition: 8 },
         destination: { galaxy: 8, solarSystem: 200, planetPosition: 8 },
         numberOfGalaxies: 9,
-    })
+    }),
 ) // intergalactic
 
 console.log("█2:100:8 to 2:400:8, numberOfGalaxies: 9")
@@ -159,7 +159,7 @@ console.log(
         origin: { galaxy: 2, solarSystem: 100, planetPosition: 8 },
         destination: { galaxy: 2, solarSystem: 400, planetPosition: 8 },
         numberOfGalaxies: 9,
-    })
+    }),
 ) // intersystem
 
 console.log("█2:100:5 to 2:100:10, numberOfGalaxies: 9")
@@ -168,7 +168,7 @@ console.log(
         origin: { galaxy: 2, solarSystem: 100, planetPosition: 5 },
         destination: { galaxy: 2, solarSystem: 100, planetPosition: 10 },
         numberOfGalaxies: 9,
-    })
+    }),
 ) // intrasystem
 
 const fleetShips: FleetShips = {
@@ -183,7 +183,7 @@ console.log(
         combustionDrive: 0,
         impulseDrive: 0,
         hyperspaceDrive: 0,
-    })
+    }),
 )
 console.log("Fleet: smallCargo, largeCargo with 5:5:5, target: 11250 from large cargo")
 console.log(
@@ -192,12 +192,12 @@ console.log(
         combustionDrive: 5,
         impulseDrive: 5,
         hyperspaceDrive: 5,
-    })
+    }),
 )
 
 console.log("████████████████████████████\nFlight time")
 console.log(
-    "█fleet of 10 smallCargo and 10 largeCargo\nfrom 2:100:8 to 3:200:8\n with 5:0:0 (speed 7500), flight time setting 1"
+    "█fleet of 10 smallCargo and 10 largeCargo\nfrom 2:100:8 to 3:200:8\n with 5:0:0 (speed 7500), flight time setting 1",
 )
 console.log("expected: 18084 seconds (5 hours 1 minute 24 seconds)")
 console.log(
@@ -211,10 +211,10 @@ console.log(
             hyperspaceDrive: 0,
         }),
         flightTimeSetting: 1,
-    })
+    }),
 )
 console.log(
-    "█fleet of 10 largeCargo\nfrom 1:3:8 to 1:5:8\n with 5:0:0 (speed 11250), flight time setting 1"
+    "█fleet of 10 largeCargo\nfrom 1:3:8 to 1:5:8\n with 5:0:0 (speed 11250), flight time setting 1",
 )
 console.log("expected: 5620 seconds (1 hour 33 minutes 40 seconds)")
 console.log(
@@ -228,5 +228,5 @@ console.log(
             hyperspaceDrive: 0,
         }),
         flightTimeSetting: 1,
-    })
+    }),
 )

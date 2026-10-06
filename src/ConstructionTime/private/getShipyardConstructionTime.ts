@@ -1,4 +1,4 @@
-import { ResourcesRecord } from "../Types/ResourcesRecord.js"
+import { ResourcesRecord } from "../../Types/ResourcesRecord.js"
 
 type GetShipyardConstructionTime = {
     unitCost: ResourcesRecord
