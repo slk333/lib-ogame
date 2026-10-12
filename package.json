@@ -1,11 +1,14 @@
 {
     "name": "@slk333/lib-ogame",
     "description": "OGame library to compute production, cost, and construction time. Provides interface for Planets and other game entities.",
-    "author": "@slk333 (GitHub), aka Antoine Weber",
+    "author": "Antoine Weber @slk333 (https://github.com/slk333)",
     "repository": {
         "url": "git+https://github.com/slk333/lib-ogame.git",
         "type": "git"
     },
+    "keywords": [
+        "ogame"
+    ],
     "homepage": "https://github.com/slk333/lib-ogame.git",
     "license": "MIT",
     "version": "2.6.0",
